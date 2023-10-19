@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Document Colours */
+
+:root {
+    /* Solid Colours */
+    --dark: #140C00;
+    --light: #fffefb;
+    --light-grey: #EAEAEA;
+    --light-grey-hov: #433636;
+    --mid-grey: #959595;
+    --dark-grey: #4d4d4d;
+    --hex-grey: #909090;
+    --hex-grey-hov: #6d6d6d;
+    --yellow: #FFCD85;
+    --yellow-hov: #feb247;
+    --hex-yellow: #EB7100;
+    --hex-yellow-hov: #cf5600;
+    --yellow-light: #FFE7C6;
+    --blue: #0f748a;
+    --blue-hov: #005163;
+    --blue-light: #BCE1E9;
+    --blue-light-hov: #92d7e6;
+    --warning: #a43f5f;
+    --warning-hov: #6b102d;
+    --warning-light: #e9c2cf;
+    --warning-light-hov: #e59bb4;
+    --success: #1e6633;
+    --success-hov: #034116;
+    --success-light: #b5dec1;
+    --success-light-hov: #8cc29c;
+    --message-closed: #e2fbea;
+    --light-pink: #fde5ee;
+}
+
+
+.font-title {
+    font-family: "Great vibes", sans-serif;
+}
+
+
+.pink-bg {
+    background-color: var(--light-pink);
+}
+
+.photo {
+    height: 400px;
+    background: url('/media/photo.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* .main-text {
+    height: 400px;
+} */
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
