@@ -122,12 +122,28 @@ body {
     color: white;
 }
 
+.shadow-btn {
+    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.35)!important;
+}
 
+
+.shadow-btn:active,
+.shadow-btn:focus {
+    background: var(--light-pink);
+    color: white;
+}
 
 /* Larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
+    }
+  }
+
+
+  @media (max-width: 992px) {
+    .container {
+      max-width: 100%;
     }
   }
 
