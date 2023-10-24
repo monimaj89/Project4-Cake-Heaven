@@ -1,0 +1,106 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "for_her",
+            "friendly_name": "For Her"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "for_him",
+            "friendly_name": "For Him"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "1birthday",
+            "friendly_name": "1st Birthday Cakes"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "18birthday",
+            "friendly_name": "18th Birthday Cakes"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "30birthday",
+            "friendly_name": "30th Birthday Cakes"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "one_tier",
+            "friendly_name": "One Tier"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "two_tier",
+            "friendly_name": "Two Tier"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "three_tier",
+            "friendly_name": "Three Tier"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "cupcakes",
+            "friendly_name": "Cupcakes"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+            "name": "brownies",
+            "friendly_name": "Brownies"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.category",
+        "fields": {
+            "name": "birthveg",
+            "friendly_name": "Birthday Vegan Cakes"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.category",
+        "fields": {
+            "name": "weddveg",
+            "friendly_name": "ShirWedding Vegan Cakes"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.category",
+        "fields": {
+            "name": "treatveg",
+            "friendly_name": "Vegan Treats"
+        }
+    }
+]

@@ -1,0 +1,203 @@
+[
+    {
+       "pk":1,
+       "model":"products.product",
+       "fields":{
+          "name":"Chocolate Cake",
+          "description":"A rich and moist chocolate cake with layers of chocolate ganache, covers in fresh fruits.",
+          "ingredients": [
+            "Flour",
+            "Sugar",
+            "Cocoa Powder",
+            "Butter",
+            "Eggs",
+            "Milk",
+            "Vanilla Extract"
+        ],
+          "price":25.99,
+          "category":1,
+          "rating":4.6,
+          "image_url":"https://www.pexels.com/https://images.pexels.com/photos/10975256/pexels-photo-10975256.jpeg?cs=srgb&dl=pexels-darko-trajkovi%C4%87-10975256.jpg&fm=jpg&w=640&h=960&_gl=1*1dw84c4*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyNDYuMC4wLjA",
+          "image":"Birthdaycake.jpg"
+       }
+    },
+    {
+        "pk":2,
+        "model":"products.product",
+        "fields":{
+           "name":"Vanilla Cake",
+           "description":"A classic vanilla cake with buttercream frosting, decorated with fresh flowers.",
+           "price":35.99,
+           "ingredients": [
+            "Flour",
+            "Sugar",
+            "Butter",
+            "Eggs",
+            "Milk",
+            "Vanilla Extract"
+          ],
+           "category":1,
+           "rating":4.6,
+           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/5487950/pexels-photo-5487950.jpeg?cs=srgb&dl=pexels-aitizaz-naqvi-5487950.jpg&fm=jpg&w=640&h=960&_gl=1*92td95*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyNTEuMC4wLjA",
+           "image":"Birthdaycake1.jpg"
+        }
+     },
+     {
+        "pk":3,
+        "model":"products.product",
+        "fields":{
+           "name":"Sponge Cake",
+           "description":"A three-layered sponge cake, filled with creamy mass, adorned with fresh fruits and edible flowers.",
+           "price":22.99,
+           "ingredients": [
+            "Flour",
+            "Sugar",
+            "Butter",
+            "Eggs",
+            "Milk",
+            "Vanilla Extract",
+            "Double cream",
+            "Rasberry jam"
+          ],
+           "category":2,
+           "rating":4.4,
+           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?cs=srgb&dl=pexels-dmitry-zvolskiy-1721934.jpg&fm=jpg&w=640&h=959&_gl=1*892ihc*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEzMDYuMC4wLjA",
+           "image":"Birthdaycake7.jpg"
+        }
+     },
+     {
+        "pk":4,
+        "model":"products.product",
+        "fields":{
+           "name":"Lemon Cake",
+           "description":"A Refreshing lemon-flavoured cake on crispy base, decorated with lemon cream and fresh strawberries.",
+           "price":19.99,
+           "ingredients": [
+            "Flour",
+            "Sugar",
+            "Butter",
+            "Eggs",
+            "Milk",
+            "Lemon Zest",
+            "Lemon Juice",
+            "Baking Powder",
+            "Strawberries"
+          ],
+           "category":2,
+           "rating":3.6,
+           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/2035735/pexels-photo-2035735.jpeg?cs=srgb&dl=pexels-cats-coming-2035735.jpg&fm=jpg&w=640&h=476&_gl=1*1ezszi2*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyNzUuMC4wLjA",
+           "image":"Birthdaycake6.jpg"
+        }
+     },
+     {
+        "pk":5,
+        "model":"products.product",
+        "fields":{
+           "name":"Underwater adventure",
+           "description":"This perfect party cake is a celebration of all things fun! This two-layered cake is inspired by amazing underwater adventures from books for our youngest, decorated with fully edible water creatures ",
+           "price":40.99,
+           "ingredients": [
+            "Flour",
+            "Sugar",
+            "Butter",
+            "Eggs",
+            "Milk",
+            "Soya"
+          ],
+           "category":3,
+           "rating":4.2,
+           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/2035735/pexels-photo-2035735.jpeg?cs=srgb&dl=pexels-cats-coming-2035735.jpg&fm=jpg&w=640&h=476&_gl=1*1ezszi2*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyNzUuMC4wLjA",
+           "image":"Birthdaycake5.jpg"
+        }
+     },
+     {
+        "pk":6,
+        "model":"products.product",
+        "fields":{
+           "name":"Teddy Bear",
+           "description":"A beautiful three-tier birthday cake straight from childhood dreams. Each tier is meticulously crafted with vibrant colors and intricate details, creating a visually captivating and delicious treat.",
+           "price":62.99,
+           "ingredients": [
+            "Flour",
+            "Sugar",
+            "Butter",
+            "Eggs",
+            "Milk",
+            "Cocoa Powder",
+            "Strawberry jam",
+            "fresh fruits"
+          ],
+           "category":3,
+           "rating":5.0,
+           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/10577002/pexels-photo-10577002.jpeg?cs=srgb&dl=pexels-tubarones-photography-10577002.jpg&fm=jpg&w=640&h=960&_gl=1*cpei1k*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTE0MDcuMC4wLjA",
+           "image":"Birthdaycake9.jpg"
+        }
+     },
+     {
+        "pk":7,
+        "model":"products.product",
+        "fields":{
+           "name":"Cherry Cake",
+           "description":"This Dream Cake is a refreshing combination of yummy cherry compote, zesty buttercream, custard, crispy pearls, digestive crumb and moist rum infused sponge.",
+           "price":32.99,
+           "ingredients": [
+            "Flour",
+            "Sugar",
+            "Butter",
+            "Eggs",
+            "Milk",
+            "Rum",
+            "Cherry"
+          ],
+           "category":6,
+           "rating":4.3,
+           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/8478058/pexels-photo-8478058.jpeg?cs=srgb&dl=pexels-los-muertos-crew-8478058.jpg&fm=jpg&w=640&h=960&_gl=1*1e1047f*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEzNzkuMC4wLjA",
+           "image":"wedding9.jpg"
+        }
+     },
+     {
+        "pk":8,
+        "model":"products.product",
+        "fields":{
+           "name":"Rainbow cake",
+           "description":"A six-layered, multicoloured sponge, made with only natural colourings is filled, covered and decorated with smooth vanilla buttercream.",
+           "price":32.99,
+           "ingredients": [
+            "Flour",
+            "Sugar",
+            "Butter",
+            "Eggs",
+            "Milk",
+            "Glucose syrup",
+            "Vanilla Extract"
+          ],
+           "category":6,
+           "rating":4.5,
+           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/8245039/pexels-photo-8245039.jpeg?cs=srgb&dl=pexels-mikhail-nilov-8245039.jpg&fm=jpg&w=640&h=959&_gl=1*15wgc1c*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEzOTYuMC4wLjA",
+           "image":"wedding10.jpg"
+        }
+     },
+     {
+        "pk":8,
+        "model":"products.product",
+        "fields":{
+           "name":"Elegant Delight",
+           "description":"We are in love with this elegant wedding cake. Our newest design and now a bestseller, this modern wedding cake has a soft, vanilla buttercream and your choice of a decorations such a flowers and toppers",
+           "price":32.99,
+           "ingredients": [
+            "Flour",
+            "Sugar",
+            "Butter",
+            "Eggs",
+            "Milk",
+            "Cocoa powder",
+            "Buttermilk"
+          ],
+           "category":7,
+           "rating":4.5,
+           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/265801/pexels-photo-265801.jpeg?cs=srgb&dl=pexels-pixabay-265801.jpg&fm=jpg&w=640&h=427&_gl=1*ebkgj4*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyODcuMC4wLjA",
+           "image":"wedding8.jpg"
+        }
+     }
+
+]
