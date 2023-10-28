@@ -33,6 +33,7 @@ class Product(models.Model):
     description = models.TextField()
     ingredients = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    is_featured = models.BooleanField(default=False)
     rating = models.DecimalField(
         max_digits=6,
         decimal_places=2,

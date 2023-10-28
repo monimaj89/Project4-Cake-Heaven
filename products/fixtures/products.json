@@ -5,6 +5,8 @@
        "fields":{
           "name":"Chocolate Cake",
           "description":"A rich and moist chocolate cake with layers of chocolate ganache, covers in fresh fruits.",
+          "price":22.99,
+          "is_featured": true,
           "ingredients": [
             "Flour",
             "Sugar",
@@ -14,7 +16,6 @@
             "Milk",
             "Vanilla Extract"
         ],
-          "price":25.99,
           "category":1,
           "rating":4.6,
           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/10975256/pexels-photo-10975256.jpeg?cs=srgb&dl=pexels-darko-trajkovi%C4%87-10975256.jpg&fm=jpg&w=640&h=960&_gl=1*1dw84c4*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyNDYuMC4wLjA",
@@ -28,6 +29,7 @@
            "name":"Vanilla Cake",
            "description":"A classic vanilla cake with buttercream frosting, decorated with fresh flowers.",
            "price":35.99,
+           "is_featured": false,
            "ingredients": [
             "Flour",
             "Sugar",
@@ -49,6 +51,7 @@
            "name":"Sponge Cake",
            "description":"A three-layered sponge cake, filled with creamy mass, adorned with fresh fruits and edible flowers.",
            "price":22.99,
+           "is_featured": true,
            "ingredients": [
             "Flour",
             "Sugar",
@@ -72,6 +75,7 @@
            "name":"Lemon Cake",
            "description":"A Refreshing lemon-flavoured cake on crispy base, decorated with lemon cream and fresh strawberries.",
            "price":19.99,
+           "is_featured": false,
            "ingredients": [
             "Flour",
             "Sugar",
@@ -96,6 +100,7 @@
            "name":"Underwater adventure",
            "description":"This perfect party cake is a celebration of all things fun! This two-layered cake is inspired by amazing underwater adventures from books for our youngest, decorated with fully edible water creatures ",
            "price":40.99,
+           "is_featured": true,
            "ingredients": [
             "Flour",
             "Sugar",
@@ -117,6 +122,7 @@
            "name":"Teddy Bear",
            "description":"A beautiful three-tier birthday cake straight from childhood dreams. Each tier is meticulously crafted with vibrant colors and intricate details, creating a visually captivating and delicious treat.",
            "price":62.99,
+           "is_featured": true,
            "ingredients": [
             "Flour",
             "Sugar",
@@ -140,6 +146,7 @@
            "name":"Cherry Cake",
            "description":"This Dream Cake is a refreshing combination of yummy cherry compote, zesty buttercream, custard, crispy pearls, digestive crumb and moist rum infused sponge.",
            "price":32.99,
+           "is_featured": false,
            "ingredients": [
             "Flour",
             "Sugar",
@@ -162,6 +169,7 @@
            "name":"Rainbow cake",
            "description":"A six-layered, multicoloured sponge, made with only natural colourings is filled, covered and decorated with smooth vanilla buttercream.",
            "price":32.99,
+           "is_featured": true,
            "ingredients": [
             "Flour",
             "Sugar",
@@ -184,6 +192,7 @@
            "name":"Elegant Delight",
            "description":"We are in love with this elegant wedding cake. Our newest design and now a bestseller, this modern wedding cake has a soft, vanilla buttercream and your choice of a decorations such a flowers and toppers",
            "price":32.99,
+           "is_featured": false,
            "ingredients": [
             "Flour",
             "Sugar",

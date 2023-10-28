@@ -14,7 +14,7 @@
                 will leave your taste buds dancing with joy.
             </h4>
             <h4>
-                <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3 m-3">Shop Now</a>
+                <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3 m-3">Shop Now</a>
             </h4>
         </div>
         <div class="col-12 col-lg-6 photo"></div>
@@ -23,44 +23,52 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
+        <div class="col-12 col-md-10 offset-md-1">
             <div class="row">
-                {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-lx-3 gy-3">
-                    <div class="card shadow h-100 border-1">
-                        <!-- Product image -->
-                        {% if product.image %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
-                        </a>
-                        {% endif %}
-                        <!-- Product name -->
-                        <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
-                        </div>
-                        <!--  Card Footer - Product price and rating -->
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                                    {% if product.rating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
-                                        5</small>
-                                    {% else %}
-                                    <small class="text-muted">No Rating</small>
-                                    {% endif %}
+                <div class="col text-center mt-3">
+                    <h2 class="logo-font">Featured Cakes</h2>
+                    <hr class="mb-1">
+                </div>
+                <div class="row pe-0">
+                    {% for product in products %}
+                        {% if product.is_featured %}    
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-lx-3 gy-3">
+                            <div class="card shadow h-100 border-1">
+                                <!-- Product image -->
+                                {% if product.image %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}"
+                                        alt="{{ product.name }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ product.name }}">
+                                </a>
+                                {% endif %}
+                                <!-- Product name -->
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ product.name }}</p>
+                                </div>
+                                <!--  Card Footer - Product price and rating -->
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                            {% if product.rating %}
+                                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                                5</small>
+                                            {% else %}
+                                            <small class="text-muted">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
     </div>
