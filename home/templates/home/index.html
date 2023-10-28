@@ -8,9 +8,10 @@
     <div class="row">
         <div class="col-12 col-lg-6 pink-bg">
             <h1 class="font-title mt-3"> Welcome to Cake Heaven, where sugary dreams come true! </h1>
-            <h4 class="my-3">Indulge in our heavenly creations, from exquisite wedding cakes to whimsical birthday delights,
+            <h4 class="my-3">Indulge in our heavenly creations, from exquisite wedding cakes to whimsical birthday
+                delights,
                 crafted with love and sprinkled with pure magic. Get ready to embark on a sweet journey that
-                will leave your taste buds dancing with joy. 
+                will leave your taste buds dancing with joy.
             </h4>
             <h4>
                 <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3 m-3">Shop Now</a>
@@ -19,5 +20,51 @@
         <div class="col-12 col-lg-6 photo"></div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-lx-3 gy-3">
+                    <div class="card shadow h-100 border-1">
+                        <!-- Product image -->
+                        {% if product.image %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <!-- Product name -->
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <!--  Card Footer - Product price and rating -->
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                        5</small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
