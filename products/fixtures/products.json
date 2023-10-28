@@ -178,7 +178,7 @@
         }
      },
      {
-        "pk":8,
+        "pk":9,
         "model":"products.product",
         "fields":{
            "name":"Elegant Delight",
