@@ -136,6 +136,10 @@ body {
     color: white;
 }
 
+/* Footer */
+.footer-mg i {
+    margin-right: 5px;
+}
 
 
 /* Larger container on xl screens */
