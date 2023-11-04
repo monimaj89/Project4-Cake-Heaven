@@ -92,7 +92,7 @@
         "model": "products.category",
         "fields": {
             "name": "weddveg",
-            "friendly_name": "ShirWedding Vegan Cakes"
+            "friendly_name": "Wedding Vegan Cakes"
         }
     },
     {

@@ -5,12 +5,16 @@
 {% block content %}
 
 <div class="container">
-    <div class="row">
+    
+    <!-- <div class="row">
+        {% if current_categories %}
         <div class="col text-center mt-3">
-            <h2 class="logo-font">All Cakes</h2>
+            <h2 class="logo-font">{{ current_categories.friendly_name }}</h2>
             <hr class="mb-1">
         </div>
-    </div>
+        {% endif %}
+    </div> -->
+    
     <div class="row">
         <div class="col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
