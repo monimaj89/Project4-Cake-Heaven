@@ -11,7 +11,6 @@
                 <a href="{% url 'products' %}?category=1birthday" class="dropdown-item ">1st Birthday Cake</a>
                 <a href="{% url 'products' %}?category=18birthday" class="dropdown-item ">18th Birthday Cake</a>
                 <a href="{% url 'products' %}?category=30birthday" class="dropdown-item ">30th Birthday Cake</a>
-                <a href="{% url 'products' %}?category=for_her,for_him,1birthday,18birthday,30birthday" class="dropdown-item">All Birthday Cakes</a>
             </div>
         </li>
 
@@ -23,7 +22,6 @@
                 <a href="{% url 'products' %}?category=one_tier" class="dropdown-item">One Tier Cakes</a>
                 <a href="{% url 'products' %}?category=two_tier" class="dropdown-item">Two Tier Cakes</a>
                 <a href="{% url 'products' %}?category=three_tier" class="dropdown-item">Three Tier Cakes</a>
-                <a href="{% url 'products' %}?category=one_tier,two_tier,three_tier" class="dropdown-item">All Wedding Cakes</a>
             </div>
         </li>
 
@@ -34,7 +32,6 @@
             <div class="dropdown-menu border-0" aria-labelledby="treats-link">
                 <a href="{% url 'products' %}?category=cupcakes" class="dropdown-item">Cupcakes</a>
                 <a href="{% url 'products' %}?category=brownies" class="dropdown-item">Brownies</a>
-                <a href="{% url 'products' %}?category=cupcakes,brownies" class="dropdown-item">All Treats</a>
             </div>
         </li>
 
@@ -46,12 +43,11 @@
                 <a href="{% url 'products' %}?category=birthveg" class="dropdown-item">Birthday Vegan Cakes</a>
                 <a href="{% url 'products' %}?category=weddveg" class="dropdown-item">Wedding Vegan Cakes</a>
                 <a href="{% url 'products' %}?category=treatveg" class="dropdown-item">Vegan Treats</a>
-                <a href="{% url 'products' %}?category=birthveg,weddveg.treatveg" class="dropdown-item">All Vegan Cakes</a>
             </div>
         </li>
         <li class="nav-item">
             <a class="logo-font nav-link text-black" href="{% url 'products' %}">
-                All Cakes
+                All Cakes &amp; Treats
             </a>
         </li>
     </ul>
