@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-monimaj89-project4cakeh-m2z134cnh2w.ws-eu105.gitpod.io',
-    'cake-heaven.herokuapp.com',
+    'https://cake-heaven-8414245a4be7.herokuapp.com/',
 ]
 
 
