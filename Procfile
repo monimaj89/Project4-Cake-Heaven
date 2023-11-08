@@ -1,1 +1,1 @@
-web: gunicorn cake-heaven.wsgi:application
+web: gunicorn cake_heaven.wsgi:application
