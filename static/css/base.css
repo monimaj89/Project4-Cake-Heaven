@@ -124,7 +124,7 @@ body {
     color: white;
 }
 
-/* Shadow on button */
+/* Shadow on hamburger button */
 .shadow-btn {
     box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.35)!important;
 }
@@ -161,6 +161,27 @@ body {
     outline: none !important;
 }
 
+
+/* Scroll to top button */
+#top-btn {
+    width: 50px;
+    height: 50px;
+    background: var(--light-pink);
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    color: black;
+    display: none;
+}
+
+#top-btn:hover {
+    background: var(--warning-light);
+}
+
+#top-btn a {
+    cursor: pointer;
+}
+
 /* Larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
@@ -174,6 +195,5 @@ body {
       max-width: 100%;
     }
   }
-
 
 

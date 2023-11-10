@@ -40,8 +40,7 @@
     </script>
     {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+    
 
 </head>
 
@@ -66,7 +65,7 @@
                     <div class="search-box">
                         <input type="text" name="q" placeholder="Search our products" aria-label="Search our products">
                         <button type="submit">
-                            <i class="fas fa-search text-ib-light"></i>
+                            <i class="fas fa-search"></i>
                             <span class="sr-only">Submit your search</span>
                         </button>
                     </div>
@@ -133,18 +132,17 @@
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
-
-
-    <!-- CHECK IF ALL THESE BLOCKS ARE BEING USED!!!!! -->
-    {% block page_header %}
-    {% endblock %}
+    
 
     {% block content %}
     {% endblock %}
 
-    {% block postloadjs %}
-    {% endblock %}
-
+    <!-- Scroll to top button -->
+    <div id="top-btn">
+        <a class="text-decoration-none border border-black shadow-sm h-100 w-100 d-flex">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
 
     <!-- Footer -->
 
@@ -193,6 +191,14 @@
             <p class="small fst-italic">Site is built for educational purposes and all products are entirely fictional. Transactions are made using Stripe's test mode and no money or products will be sent or received.</p>
         </div>
     </footer>
+
+    {% block postloadjs %}
+        <!-- Scroll Up Button -->
+        <script src="{% static 'js/scroll_top.js' %}"></script> 
+    {% endblock %}
+
+    {% block extra_js%}
+    {% endblock %}
 </body>
 
 </html>
