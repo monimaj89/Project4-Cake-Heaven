@@ -3,18 +3,27 @@
 
 
 {% block content %}
-<div>
-    <h1>Contact</h1>
-    <h4>Contact us directly if you have any questions</h4>
-    <p>
-        Please write your name, email address and a message below if you have any questions.
-        One of our staff members will be happy to contact you directly and answer your questions as soon as possible. 
-    </p>
-    <form action="{% url 'contact' %}" method="POST">
-    {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Submit</button>
-    </form>
+
+<div class="container">
+    <div class="row bg-color pt-3 mb-2">
+        <div class="col-12 col-lg-10 offset-lg-5">
+            <h3 class="logo-font mb-4">Contact us</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3 mt-2">
+            <p>Send us a message using the form below.</p>
+            <form method="POST" action="{% url 'contact' %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-right">
+                    <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-black rounded-0" type="submit">Send</button>
+                </div>
+            </form>
+        </div>            
+    </div>
 </div>
 
 {% endblock %}

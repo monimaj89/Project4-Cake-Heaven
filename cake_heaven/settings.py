@@ -49,10 +49,15 @@ INSTALLED_APPS = [
     'home',
     'products',
     'contact',
+    
 
     # Other
     'storages',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -65,6 +70,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'cake_heaven.urls'
+
 
 TEMPLATES = [
     {
@@ -82,6 +88,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]

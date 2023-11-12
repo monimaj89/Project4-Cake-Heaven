@@ -197,3 +197,6 @@ body {
   }
 
 
+.bg-color {
+    background: var(--light-pink);
+}
