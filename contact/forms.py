@@ -9,7 +9,7 @@ class ContactForm(forms.ModelForm):
 
     class Meta:
         model = Contact
-        fields = ('name', 'email', 'subject', 'description')
+        fields = ('name', 'email', 'subject', 'message')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,7 +19,7 @@ class ContactForm(forms.ModelForm):
         self.fields['name'].widget.attrs['placeholder'] = 'Your Name'
         self.fields['email'].widget.attrs['placeholder'] = 'Your Email'
         self.fields['subject'].widget.attrs['placeholder'] = 'Message Subject'
-        self.fields['description'].widget.attrs['placeholder'] = 'Your Message'
+        self.fields['message'].widget.attrs['placeholder'] = 'Your Message'
 
         for field in self.fields:
             # Adds stylings classes to inputs
