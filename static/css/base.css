@@ -82,8 +82,8 @@ body {
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus {
-    background: #222;
-    color: white;
+    background: #222 !important;
+    color: white !important;
 }
 
 /* Search bar */
@@ -141,6 +141,16 @@ body {
     margin-right: 5px;
 }
 
+.footer-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    -webkit-text-decoration-color: rgba(255, 254, 251, 0);
+    text-decoration-color: rgba(255, 254, 251, 0);
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
 
 /* Products sorting */
 .sort-select-wrapper {
@@ -182,6 +192,17 @@ body {
     cursor: pointer;
 }
 
+
+/* Contact Page */
+.bg-color {
+    background: var(--light-pink);
+}
+
+
+.btn:hover {
+    background: var(--warning-light);
+}
+
 /* Larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
@@ -197,31 +218,5 @@ body {
   }
 
 
-.bg-color {
-    background: var(--light-pink);
-}
 
-.send-btn {
-    font-size: 16px;
-    padding: 6px 10px;
-    border-radius: 2px;
-}
 
-.btn-pink {
-    background: var(--light-pink);
-}
-
-.send-btn:hover {
-    background: var(--warning-light);
-}
-
-.footer-link:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    -webkit-text-decoration-color: rgba(255, 254, 251, 0);
-    text-decoration-color: rgba(255, 254, 251, 0);
-    transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-}
