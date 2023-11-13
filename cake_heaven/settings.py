@@ -108,9 +108,10 @@ SITE_ID = 1
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+# Handle contact form message sending
 EMAIL_BACKEND = 'django_ses.SESBackend'
-AWS_ACCESS_KEY_ID = 'AKIA5QMEETLBQHUSROOD'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_SES_REGION_NAME = 'us-east-1' 
 AWS_SES_REGION_ENDPOINT ='email.us-east-1.amazonaws.com'
 
