@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 import dj_database_url
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -107,6 +108,7 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 # Handle contact form message sending
 EMAIL_BACKEND = 'django_ses.SESBackend'
