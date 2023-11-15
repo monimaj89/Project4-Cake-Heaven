@@ -199,6 +199,11 @@ body {
     background: var(--warning-light);
 }
 
+/* Success page, keep footer down */
+.padding-bottom {
+    padding-bottom: 9rem;
+}
+
 /* Larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
@@ -212,7 +217,6 @@ body {
       max-width: 100%;
     }
   }
-
 
 
 
