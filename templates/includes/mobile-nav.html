@@ -1,5 +1,5 @@
 <!-- Mobile dropdown navbar -->
-<ul>
+<ul class="ps-1">
     <li class="list-inline-item">
         <a class="text-black nav-link d-block d-lg-none" href="{% url 'home' %}">
             <div class="text-center">
@@ -59,12 +59,12 @@
     </li>
     <!-- Shopping Bag -->
     <li class="list-inline-item">
-        <a class="text-black text-center nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
-            {% if grand_total %}
-            <i class="fa-solid fa-cart-plus fa-lg"></i>
-            {% else %}
+        <a class="nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
             <div class="text-center">
-                <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
+            {% if grand_total %}
+                <div><i class="fa-solid fa-cart-plus fa-lg"></i></div>  <!-- Icon for full basket -->
+            {% else %}
+                <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>  <!-- Default icon for empty basket -->
             {% endif %}
                 <p class="my-0">
                     {% if grand_total %}

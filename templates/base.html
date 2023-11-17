@@ -101,12 +101,12 @@
                     <!-- Shopping Bag -->
                     <li class="list-inline-item">
                         <a class="text-black text-center nav-link" href="{% url 'view_bag' %}">
-                            {% if grand_total %}
-                            <i class="fa-solid fa-cart-plus fa-lg"></i>
-                            {% else %}
                             <div class="text-center">
-                                <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
-                            {% endif %}
+                                {% if grand_total %}
+                                    <div><i class="fa-solid fa-cart-plus fa-lg"></i></div>  <!-- Icon for full basket -->
+                                {% else %}
+                                    <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>  <!-- Default icon for empty basket -->
+                                {% endif %}
                                 <p class="my-0">
                                     {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
