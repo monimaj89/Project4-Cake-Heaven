@@ -17,7 +17,6 @@ body {
     --light: #fffefb;
     --light-grey: #EAEAEA;
     --light-grey-hov: #433636;
-    --mid-grey: #959595;
     --dark-grey: #4d4d4d;
     --hex-grey: #909090;
     --hex-grey-hov: #6d6d6d;
@@ -49,7 +48,7 @@ body {
 
 
 .pink-bg {
-    background-color: var(--light-pink);
+    background-color: var(--light-pink) !important;
 }
 
 
@@ -236,6 +235,18 @@ body {
 /* Success page, keep footer down */
 .padding-bottom {
     padding-bottom: 9rem;
+}
+
+
+/* Bag */
+.image-ratio {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    width: 100%;
+}
+
+.bottom-border {
+    border-bottom: var(--hex-grey) 1px solid;
 }
 
 
