@@ -218,8 +218,9 @@ body {
 
 
 /* Contact Page */
-.bg-color {
+.bg-btn-color {
     background: var(--light-pink);
+    border: 1px solid black;
 }
 
 
@@ -266,3 +267,6 @@ body {
     }
   }
 
+.black-btn {
+    min-width: 160px;
+}

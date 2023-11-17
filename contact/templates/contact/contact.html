@@ -5,7 +5,7 @@
 {% block content %}
 
 <div class="container">
-    <div class="row bg-color pt-3 mb-2 shadow">
+    <div class="row bg-btn-color pt-3 mb-2 shadow">
         <div class="col-12 col-lg-10 offset-lg-5">
             <h3 class="logo-font mb-4">Contact us</h3>
         </div>
@@ -18,8 +18,8 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-right">
-                    <a class="bg-color btn btn-hov rounded-0 shadow logo-font me-2 px-2 py-2" href="{% url 'products' %}">Cancel</a>
-                    <button class="bg-color btn btn-hov rounded-0 shadow logo-font px-2 py-2" type="submit">Send</button>
+                    <a class="bg-btn-color btn btn-hov rounded-0 shadow logo-font me-2 px-2 py-2" href="{% url 'products' %}">Cancel</a>
+                    <button class="bg-btn-color btn btn-hov rounded-0 shadow logo-font px-2 py-2" type="submit">Send</button>
                 </div>
             </form>
         </div>            
