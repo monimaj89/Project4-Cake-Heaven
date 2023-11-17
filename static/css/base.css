@@ -195,7 +195,7 @@ body {
 }
 
 
-.btn:hover {
+.btn-hov:hover {
     background: var(--warning-light);
 }
 
