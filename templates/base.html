@@ -47,9 +47,12 @@
 <body>
     <header class="container">
         <!-- Banner -->
-        <div class="row text-center">
-            <div class="col pink-bg text-black">
-                <p class="logo-font my-2">Order by 4PM for next day delivery</p>
+        <div class="row text-center baner-anim pink-bg text-black">
+            <div class="anim">
+                <p class="logo-font my-2 ms-0">Order by 4PM for next day delivery</p>
+            </div>
+            <div class="anim">
+                <p class="logo-font my-2">Free delivery on orders over £{{ free_delivery_threshold }}!</p>
             </div>
         </div>
         <!-- Logo  -->
@@ -105,7 +108,7 @@
                                     {% if grand_total %}
                                     ${{ grand_total|floatformat:2 }}
                                     {% else %}
-                                    $0.00
+                                    £0.00
                                     {% endif %}
                                 </p>
                             </div>
@@ -164,8 +167,10 @@
                 </a>
                 <!-- Clickable links for telephone number and email address -->
                 <ul class="list-unstyled">
-                    <li class="mb-2 footer-link">Phone: <a class="text-black text-decoration-none" href="tel:01756254754">01 756 254 754</a></li>
-                    <li class="mb-2 footer-link">Email: <a class="text-black text-decoration-none" href="mailto:cakeheaven.project4@gmail.com">cakeheaven.project4@gmail.com</a></li>
+                    <li class="mb-2 footer-link">Phone: <a class="text-black text-decoration-none"
+                            href="tel:01756254754">01 756 254 754</a></li>
+                    <li class="mb-2 footer-link">Email: <a class="text-black text-decoration-none"
+                            href="mailto:cakeheaven.project4@gmail.com">cakeheaven.project4@gmail.com</a></li>
                     <li>Address: 123 Baker Street, Caketown, UK</li>
                 </ul>
             </div>
