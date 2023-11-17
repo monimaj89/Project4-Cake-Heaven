@@ -228,6 +228,10 @@ body {
     background: var(--warning-light);
 }
 
+.black-btn {
+    min-width: 160px;
+}
+
 
 /* Success page, keep footer down */
 .padding-bottom {
@@ -267,6 +271,3 @@ body {
     }
   }
 
-.black-btn {
-    min-width: 160px;
-}
