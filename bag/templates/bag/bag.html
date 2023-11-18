@@ -4,7 +4,6 @@
 
 {% block content %}
 <!-- Bag container -->
-<div class="overlay"></div>
 <div class="container mb-2 pt-3">
     <div class="row">
         <div class="col">
@@ -143,15 +142,13 @@
             </div>
             {% else %}
             <!-- Empty Bag -->
-            <div class="padding-bottom">
                 <p class="lead my-5">Your bag is empty.</p>
-                <a href="{% url 'products' %}" class="bg-btn-color btn btn-lg btn-hov rounded-0 shadow logo-font">
-                    <span class="icon">
+                <a href="{% url 'products' %}" class="bg-btn-color btn btn-lg btn-hov rounded-0 shadow logo-font my-5">
+                    <span>
                         <i class="fas fa-chevron-left"></i>
                     </span>
                     <span class="logo-font">Keep Shopping</span>
                 </a>
-            </div>
             {% endif %}
         </div>
     </div>
