@@ -20,7 +20,7 @@ body {
     --dark-grey: #4d4d4d;
     --hex-grey: #909090;
     --hex-grey-hov: #6d6d6d;
-    --yellow: #FFCD85;
+    --info: #FFCD85;
     --yellow-hov: #feb247;
     --hex-yellow: #EB7100;
     --hex-yellow-hov: #cf5600;
@@ -31,7 +31,7 @@ body {
     --blue-light-hov: #92d7e6;
     --danger: #dc3545;
     --danger-hov: #931a26;
-    --warning-light: #e9c2cf;
+    --warning: #bc3663;
     --warning-light-hov: #e59bb4;
     --success: #1e6633;
     --success-hov: #114b23;
@@ -286,7 +286,7 @@ body {
 
 .message-container {
     position: fixed;
-    top: 72px;
+    top: 110px;
     right: 15px;
     z-index: 99999999999;
 }
@@ -297,6 +297,43 @@ body {
 
 .toast-capper {
     height: 3px;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Toast arrows */
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+
+.arrow-success {
+    border-bottom-color: var(--success)  !important;
+}
+
+.arrow-danger {
+    border-bottom-color: var(--danger) !important;
+}
+
+.arrow-warning {
+    border-bottom-color: var(--warning) !important;
+}
+
+.arrow-info {
+    border-bottom-color: var(--info) !important;
 }
 
 
