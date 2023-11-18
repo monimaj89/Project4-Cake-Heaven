@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block content %}
 <!-- Bag container -->
@@ -58,7 +59,7 @@
                     </div>
                     <div class="col-12 text-center">
                         <p class="my-0">Price Each: £{{ item.product.price }}</p>
-                        <p>Subtotal: £{{ item.product.price }}</p>
+                        <p>Subtotal: £{{ item.product.price | calc_subtotal:item.quantity }}</p>
                     </div>
                     <div class="col-12 mt-3">
                         {% include "bag/quantity_box.html" %}
@@ -102,7 +103,7 @@
                             {% include "bag/quantity_box.html" %}
                         </td>
                         <td class="py-3 text-center align-middle">
-                            <p class="my-0">£{{ item.product.price }}</p>
+                            <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -142,13 +143,15 @@
             </div>
             {% else %}
             <!-- Empty Bag -->
-            <p class="lead my-5">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="bg-btn-color btn btn-lg btn-hov rounded-0 shadow logo-font">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="logo-font">Keep Shopping</span>
-            </a>
+            <div class="padding-bottom">
+                <p class="lead my-5">Your bag is empty.</p>
+                <a href="{% url 'products' %}" class="bg-btn-color btn btn-lg btn-hov rounded-0 shadow logo-font">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="logo-font">Keep Shopping</span>
+                </a>
+            </div>
             {% endif %}
         </div>
     </div>
