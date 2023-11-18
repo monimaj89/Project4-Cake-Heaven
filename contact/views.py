@@ -24,7 +24,7 @@ def contact(request):
             message = "\n".join(body.values())
 
             try:
-                send_mail(subject, message, 'cakeheaven.project4@gmail.com', ['cakeheaven.project4@gmail.com'])
+                send_mail(subject, message, '4cakeheaven@gmail.com', ['4cakeheaven@gmail.com'])
                 return render(request, 'contact/success.html')
             # Return BadHeaderError to prevent attackers inserting extra email headers
             except BadHeaderError:
