@@ -240,7 +240,7 @@ body {
 
 /* Bag */
 .image-ratio {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     object-fit: contain;
     width: 100%;
 }

@@ -51,12 +51,12 @@
                 {% for item in bag_items %}
                 <div class="row">
                     <div class="col-12 mb-2">
-                        <img class="img-fluid" src="{{ item.product.image.url }}">
+                        <img class="img-fluid image-ratio" src="{{ item.product.image.url }}">
                     </div>
-                    <div class="col-12 mb-2 logo-font">
+                    <div class="col-12 mb-2 logo-font text-center">
                         {{ item.product.name }}
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 text-center">
                         <p class="my-0">Price Each: £{{ item.product.price }}</p>
                         <p>Subtotal: £{{ item.product.price }}</p>
                     </div>
@@ -143,7 +143,7 @@
             {% else %}
             <!-- Empty Bag -->
             <p class="lead my-5">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="bg-color btn btn-lg btn-hov rounded-0 shadow logo-font">
+            <a href="{% url 'products' %}" class="bg-btn-color btn btn-lg btn-hov rounded-0 shadow logo-font">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
