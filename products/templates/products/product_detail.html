@@ -50,27 +50,30 @@
                     {% csrf_token %}
                     <div class="row">
                         <div class="col-12">
-                            <!--  quantity -->
+                            
+                            <!--  Quantity -->
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="w-50">
-                                <div class="input-group">
+                                <div class="input-group input-group-{{ product.id }}">
                                     <!-- Decrement quantity -->
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty bg-btn-color btn btn-hov rounded-0 shadow logo-font"
+                                        <button class="decrement-qty bg-btn-color btn btn-hov rounded-0 shadow decrement-qty_{{ product.id }}"
                                             data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                            <span class="icon">
+                                            <span>
                                                 <i class="fas fa-minus"></i>
+                                                <span class="sr-only">Decrease quantity</span>
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99"
-                                        data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <input class="form-control qty_input id_qty_{{ product.id }}" type="number" name="quantity" value="1" min="1" max="99"
+                                        data-item_id="{{ product.id }}" aria-label="Quantity">
                                         <!-- Increment quantity -->
                                     <div class="input-group-append">
-                                        <button class="increment-qty bg-btn-color btn btn-hov rounded-0 shadow logo-font"
-                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                            <span class="icon">
+                                        <button class="increment-qty bg-btn-color btn btn-hov rounded-0 shadow increment-qty_{{ product.id }}"
+                                            data-item_id="{{ product.id }}">
+                                            <span>
                                                 <i class="fas fa-plus"></i>
+                                                <span class="sr-only">Increase quantity</span>
                                             </span>
                                         </button>
                                     </div>

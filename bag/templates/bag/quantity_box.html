@@ -1,0 +1,35 @@
+
+<!-- Quantity form -->
+<form class="form update-form mb-3" method="POST" action="">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group input-group-{{ item.item_id }}">
+            <!-- Decrement button -->
+            <div class="input-group-prepend">
+                <button class="decrement-qty bg-btn-color btn btn-hov rounded-0 shadow decrement-qty_{{ item.item_id }}" 
+                    data-item_id="{{ item.item_id }}">
+                    <span>
+                        <i class="fas fa-minus fa-sm"></i>
+                        <span class="sr-only">Decrease Quantity</span>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Input box -->
+            <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
+                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                data-item_id="{{ item.item_id }}" aria-label="Quantity">
+
+            <!-- Increment button -->
+            <div class="input-group-append">
+                <button class="increment-qty bg-btn-color btn btn-hov rounded-0 shadow increment-qty_{{ item.item_id }}"
+                    data-item_id="{{ item.item_id }}">
+                    <span>
+                        <i class="fas fa-plus fa-sm"></i>
+                        <span class="sr-only">Increase Quantity</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -61,7 +61,7 @@
                         <p>Subtotal: £{{ item.product.price }}</p>
                     </div>
                     <div class="col-12 mt-3">
-                      
+                        {% include "bag/quantity_box.html" %}
                     </div>
                 </div>
                <!-- Horizontal line at the end fo bag list -->
@@ -79,11 +79,11 @@
                     <!-- Table Header -->
                     <thead class="text-black">
                         <tr>
-                            <th scope="col" class="pink-bg logo-font">Product</th>
+                            <th scope="col" class="pink-bg logo-font text-center">Product</th>
                             <th scope="col" class="pink-bg logo-font"></th>
                             <th scope="col" class="pink-bg logo-font">Price</th>
-                            <th scope="col" class="pink-bg logo-font">Qty</th>
-                            <th scope="col" class="pink-bg logo-font">Subtotal</th>
+                            <th scope="col" class="pink-bg logo-font text-center">Qty</th>
+                            <th scope="col" class="pink-bg logo-font text-center">Subtotal</th>
                         </tr>
                     </thead>
                     <!-- Table content -->
@@ -99,9 +99,9 @@
                             <p class="my-0">£{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25 align-middle">
-                            <p class="my-0">{{ item.quantity }}</p>
+                            {% include "bag/quantity_box.html" %}
                         </td>
-                        <td class="py-3 align-middle">
+                        <td class="py-3 text-center align-middle">
                             <p class="my-0">£{{ item.product.price }}</p>
                         </td>
                     </tr>
@@ -153,4 +153,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+    <!-- Quantity Input JS -->
+    <script src="{% static 'js/quantity_input.js' %}"></script>
 {% endblock %}
