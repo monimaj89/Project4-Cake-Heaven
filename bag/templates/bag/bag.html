@@ -73,6 +73,7 @@
                 {% endfor %}
             </div>
 
+            
             <!-- Desktop display -->
             <div class="table-responsive d-none d-sm-block mt-3">
                 <table class="table table-borderless">
@@ -125,14 +126,14 @@
                         <td colspan="5" class="text-end">
                             <a href="{% url 'products' %}"
                                 class="bg-btn-color btn btn-hov rounded-0 shadow logo-font me-2">
-                                <span class="icon">
+                                <span>
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="logo-font">Keep Shopping</span>
                             </a>
-                            <a href="" class="shop-now-button btn black-btn rounded-0">
+                            <a href="{% url 'checkout' %}" class="shop-now-button btn black-btn rounded-0">
                                 <span class="logo-font">Secure Checkout</span>
-                                <span class="icon">
+                                <span>
                                     <i class="fas fa-lock"></i>
                                 </span>
                             </a>

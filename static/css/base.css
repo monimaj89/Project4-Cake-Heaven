@@ -52,7 +52,7 @@ body {
 }
 
 
-/* ------------------Banner animation */
+/* ------------------ Banner animation */
 .baner-anim {
     font-weight: bold;
     position: relative;
@@ -79,7 +79,7 @@ body {
 }
 
 
-/* --------------------Main page photo */
+/* -------------------- Main page photo */
 .photo {
     height: 400px;
     background: url('/media/photo.jpg') no-repeat center center;
@@ -95,7 +95,7 @@ body {
     width: fit-content;
 }
 
-/* -------------------Shop Now Button */
+/* ------------------- Shop Now Button */
 .shop-now-button {
     background: black;
     color: white;
@@ -109,7 +109,7 @@ body {
     color: white !important;
 }
 
-/* -------------------Search bar */
+/* ------------------- Search bar */
 .search-box {
     height: 42px;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.50) inset;
@@ -147,7 +147,7 @@ body {
     color: white;
 }
 
-/* -----------------Shadow on hamburger button */
+/* ----------------- Shadow on hamburger button */
 .shadow-btn {
     box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.35)!important;
 }
@@ -159,7 +159,7 @@ body {
     color: white;
 }
 
-/* ------------------Footer */
+/* ------------------ Footer */
 .footer-mg i {
     margin-right: 5px;
 }
@@ -175,7 +175,7 @@ body {
     -o-transition: all 1s ease-in-out;
 }
 
-/* ---------------------Products sorting */
+/* --------------------- Products sorting */
 .sort-select-wrapper {
     overflow: hidden;
     border: 2px solid var(--warning-light) !important;
@@ -195,7 +195,7 @@ body {
 }
 
 
-/* -------------------Scroll to top button */
+/* ------------------- Scroll to top button */
 #top-btn {
     width: 50px;
     height: 50px;
@@ -218,7 +218,7 @@ body {
 }
 
 
-/* ------------------------Contact Page */
+/* ------------------------ Contact Page */
 .bg-btn-color {
     background: var(--light-pink);
     border: 1px solid black;
@@ -234,13 +234,13 @@ body {
 }
 
 
-/* ---------------------Success page, keep footer down */
+/* --------------------- Success page, keep footer down */
 .padding-bottom {
     padding-bottom: 9rem;
 }
 
 
-/* ---------------------Bag */
+/* --------------------- Bag */
 .image-ratio {
     aspect-ratio: 4 / 3;
     object-fit: contain;
@@ -252,7 +252,7 @@ body {
 }
 
 
-/* ---------------Quantity on product details */
+/* --------------- Quantity on product details */
 .qty_input {
     box-shadow: 0px 0px 0px 1px black inset;
     border: none !important;
@@ -337,7 +337,7 @@ body {
 }
 
 
-/* -------------------Keyframes for banner animation */
+/* ------------------- Keyframes for banner animation */
 @keyframes autoplay {
     0% {
         visibility: visible
@@ -346,6 +346,20 @@ body {
         visibility: hidden
     }
   }
+
+
+  /* ------------------- Checkout */
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: #000;
+    border: 1px solid #000;
+}
 
 
 /* ----------------------Media queries */
@@ -370,4 +384,5 @@ body {
         height: 55px;
     }
   }
+
 
