@@ -285,9 +285,9 @@ body {
 /* ----------------------------- Toast messages */
 
 .message-container {
-    position: fixed;
-    top: 110px;
-    right: 15px;
+    position: absolute;
+    top: -65px;
+    right: -13px;
     z-index: 99999999999;
 }
 
@@ -357,9 +357,11 @@ body {
 
 
 @media (max-width: 992px) {
-    .container {
-      max-width: 100%;
-    }
+    .container { max-width: 100%; }
+    .message-container {
+        top: -18px;
+        right: -5px;
+}
   }
 
 
