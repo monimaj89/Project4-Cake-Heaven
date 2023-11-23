@@ -63,15 +63,15 @@
 
             <!-- Delivery form -->
             <div class="col-12 col-lg-6">
-                <p class="text-muted">Please fill out the form below to complete your order</p>
+                <p class="text-black">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded-0 px-3 mb-5">
+                    <fieldset class="rounded-0 pe-5 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
-                    <fieldset class="rounded-0 px-3 mb-5">
+                    <fieldset class="rounded-0 pe-5 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
@@ -93,10 +93,10 @@
 							{% endif %}
 						</div>
                     </fieldset>
-                    <fieldset class="px-3">
+                    <fieldset class="pe-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                         <!-- A Stripe card element will go here -->
-                        <div class="mb-3" id="card-element"></div>
+                        <div class="mb-3 shadow" id="card-element"></div>
 
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
