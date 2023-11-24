@@ -426,6 +426,56 @@ select option[value=""] {
     color: var(--warning);
 }
 
+
+/* Allauth form formatting */
+
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.allauth-form-inner-content input:focus {
+    box-shadow: 0px 0px 0px 2px var(--light-pink) inset;
+    border: none !important;
+    outline: none !important;
+    background-color: #fff;
+}
+
+.allauth-form-inner-content label {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: #222; /* text-info */
+}
+
+
 /* ----------------------Media queries */
 @media (min-width: 1200px) {
     .container {
