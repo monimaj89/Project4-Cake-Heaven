@@ -3,7 +3,11 @@
 
 
 {% block content %}
+
+<!-- Order confirmation page -->
     <div class="container">
+
+        <!-- Title section -->
         <div class="row">
             <div class="col p-0">
                 <hr>
@@ -12,9 +16,12 @@
             </div>
         </div>
 
+        <!-- Order confirmation box -->
         <div class="row">
             <div class="col-12 col-lg-7">
                 <div>
+
+                    <!-- Order info -->
                     <div class="row">
                         <div class="col pink-bg p-2">
                             <small class="text-body-secondary">Order Info:</small>
@@ -39,6 +46,7 @@
                         </div>
                     </div>
 
+                    <!-- Order details -->
                     <div class="row">
                         <div class="col my-2 pink-bg p-2">
                             <small class="text-body-secondary">Order Details:</small>
@@ -58,6 +66,7 @@
                     </div>
                     {% endfor %}
 
+                    <!-- Delivery info -->
                     <div class="row">
                         <div class="col my-2 pink-bg p-2">
                             <small class="text-body-secondary">Delivering To:</small>
@@ -131,6 +140,7 @@
                         </div>
                     </div>
 
+                    <!-- Billing info -->
                     <div class="row">
                         <div class="col my-2 pink-bg p-2">
                             <small class="text-body-secondary">Billing Info:</small>
@@ -166,9 +176,12 @@
                 </div>
             </div>
         </div>
+
+        <!-- Buttons -->
         <div class="row">
             <hr class="mt-2">
             <div class="col-12 mb-4 mt-2 ps-2">
+                
                 <!-- Button to get back to products -->
                 <a href="{% url 'products' %}" class="bg-btn-color btn btn-hov rounded-0 shadow me-2 logo-font">
                     <span>
