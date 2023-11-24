@@ -34,7 +34,7 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
-    
+
     # Sets Stripe Keys
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -52,9 +52,16 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
         }
+        
         order_form = OrderForm(form_data)
+
+        # Handles a valid form submission
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_bag = json.dumps(bag)
+            order.save()
             
             # Iterates through bag items to create line_items
             for item_id, item_data in bag.items():
@@ -113,8 +120,6 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
-        print(intent)
 
         order_form = OrderForm()
 
