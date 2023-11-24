@@ -391,6 +391,31 @@ body {
 }
 
 
+/* -------------------- Loading animation */
+
+#loading-overlay {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 12, 0, .85);
+    z-index: 9999;
+}
+
+.loading-spinner {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
+.spinner-pink {
+    color: var(--warning);
+}
+
 /* ----------------------Media queries */
 @media (min-width: 1200px) {
     .container {
