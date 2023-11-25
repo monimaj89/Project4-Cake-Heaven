@@ -181,7 +181,14 @@
         <div class="row">
             <hr class="mt-2">
             <div class="col-12 mb-4 mt-2 ps-2">
-                
+
+                {% if from_profile %}
+                <!-- Button to profile page -->
+                <a href="{% url 'profile' %}" class="shop-now-button btn black-btn rounded-0 logo-font">
+                    <p class="d-inline me-1">Back to profile</p>
+                    <i class="fas fa-user d-inline"></i>
+                </a>
+                {% else %}
                 <!-- Button to get back to products -->
                 <a href="{% url 'products' %}" class="bg-btn-color btn btn-hov rounded-0 shadow me-2 logo-font">
                     <span>
@@ -189,12 +196,7 @@
                     </span>
                     <span>Keep Shopping</span>
                 </a>
-
-                <!-- Button to profile page -->
-                <a href="{% url 'profile' %}" class="shop-now-button btn black-btn rounded-0 logo-font">
-                    <p class="d-inline me-1">Back to profile</p>
-                    <i class="fas fa-user d-inline"></i>
-                </a>
+                {% endif %}
             </div>
         </div>
     </div>
