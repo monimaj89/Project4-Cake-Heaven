@@ -49,7 +49,7 @@
                 <!-- Edit and delete product links -->
                 {% if request.user.is_superuser %}
                     <p class="mt-2">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a class="text-success" href="{% url 'edit_product' product.id %}">Edit</a> | 
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                     </p>
                 {% endif %}
@@ -102,7 +102,7 @@
                         <div class="col-12 mt-5">
                             <a href="{% url 'products' %}"
                                 class="bg-btn-color btn btn-hov rounded-0 shadow logo-font me-2">
-                                <span class="icon">
+                                <span>
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="logo-font">Keep Shopping</span>
