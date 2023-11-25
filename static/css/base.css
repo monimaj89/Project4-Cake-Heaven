@@ -441,7 +441,6 @@ select option[value=""] {
     box-shadow: 0px 0px 0px 2px var(--light-pink) inset;
     border: none !important;
     outline: none !important;
-    background-color: #fff;
 }
 
 .allauth-form-inner-content label {
@@ -464,12 +463,12 @@ select option[value=""] {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.allauth-form-inner-content button:hover,
+/* .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
     background-color: #222;
     border-color: #222;
-}
+} */
 
 .allauth-form-inner-content a {
 	color: #222; /* text-info */
