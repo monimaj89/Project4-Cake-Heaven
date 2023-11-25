@@ -128,6 +128,7 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 # Delete the product
 def delete_product(request, product_id):
     """ Delete a product from the store """

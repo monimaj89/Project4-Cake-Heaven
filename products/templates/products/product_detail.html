@@ -28,11 +28,11 @@
                 <!-- Product name -->
                 <p class="lead logo-font fw-bold">{{ product.name }}</p>
                 <!-- Product price -->
-                <p class="lead text-left font-weight-bold">£{{ product.price }}</p>
+                <p class="lead text-start font-weight-bold">£{{ product.price }}</p>
                 <!-- Display category -->
                 {% if product.category %}
                 <p class="small">
-                    <a class="text-muted text-decoration-none"
+                    <a class="text-secondary text-decoration-none"
                         href="{% url 'products' %}?category={{ product.category.name }}">
                         <i class="fa-solid fa-cake-candles me-1"></i>{{ product.category.friendly_name }}
                     </a>
@@ -41,9 +41,17 @@
 
                 <!-- Product rating -->
                 {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star me-1"></i>{{ product.rating }} / 5</small>
+                <small class="text-secondary"><i class="fas fa-star me-1"></i>{{ product.rating }} / 5</small>
                 {% else %}
-                <small class="text-muted">No Rating</small>
+                <small class="text-secondary">No Rating</small>
+                {% endif %}
+
+                <!-- Edit and delete product links -->
+                {% if request.user.is_superuser %}
+                    <p class="mt-2">
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </p>
                 {% endif %}
 
                 <!-- Product description -->
