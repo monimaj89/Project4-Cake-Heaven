@@ -17,7 +17,7 @@
             <form method="POST" action="{% url 'contact' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div class="text-right">
+                <div class="text-end">
                     <a class="bg-btn-color btn btn-hov rounded-0 shadow logo-font me-2 px-2 py-2" href="{% url 'products' %}">Cancel</a>
                     <button class="bg-btn-color btn btn-hov rounded-0 shadow logo-font px-2 py-2" type="submit">Send</button>
                 </div>
