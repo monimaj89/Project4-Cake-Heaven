@@ -541,12 +541,12 @@ select option[value=""] {
 /* --------------------- 404 page */
 
 .error-size {
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .error {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     height: auto;
 }
 
