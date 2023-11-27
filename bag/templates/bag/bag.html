@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col px-0">
             <hr>
-            <h2 class="logo-font pink-bg mb-4 py-2 ps-3">Shopping Bag</h2>
+            <h2 class="logo-font pink-bg mb-4 py-2 ps-3 text-center">Shopping Bag</h2>
         </div>
     </div>
     <div class="row">
@@ -23,27 +23,30 @@
                         <!-- Bag total -->
                         <p class="mb-1">Bag Total: £{{ total|floatformat:2 }}</p>
                         <p>Delivery: £{{ delivery|floatformat:2 }}<p>
-                        <p class="mt-2 fw-bolder logo-font">Grand Total: £{{ grand_total|floatformat:2 }}</p>
-                        {% if free_delivery_delta > 0 %}
-                        <p>You could get free delivery by spending just <span>£{{ free_delivery_delta }}</span>
-                            more!</p>
-                        {% endif %}
+                                <p class="mt-2 fw-bolder logo-font">Grand Total: £{{ grand_total|floatformat:2 }}</p>
+                                {% if free_delivery_delta > 0 %}
+                                <p>You could get free delivery by spending just <span>£{{ free_delivery_delta }}</span>
+                                    more!</p>
+                                {% endif %}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 mb-4">
-                        <!-- Button to get back to products -->
-                        <a href="{% url 'products' %}" class="bg-btn-color btn btn-hov rounded-0 shadow me-2 logo-font">
-                            <span>
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span>Keep Shopping</span>
-                        </a>
-                        <!-- Button for checkout -->
-                        <a href="{% url 'checkout' %}" class="shop-now-button btn black-btn rounded-0 logo-font">
-                            <p class="d-inline me-1">Secure Checkout</p>
-                            <i class="fas fa-lock d-inline"></i>
-                        </a>
+                        <div class="d-flex justify-content-start">
+                            <!-- Button to get back to products -->
+                            <a href="{% url 'products' %}"
+                                class="bg-btn-color btn btn-hov rounded-0 shadow me-2 logo-font">
+                                <span>
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span>Back to Shop</span>
+                            </a>
+                            <!-- Button for checkout -->
+                            <a href="{% url 'checkout' %}" class="shop-now-button btn black-btn rounded-0 logo-font">
+                                <p class="d-inline me-1">Checkout</p>
+                                <i class="fas fa-lock d-inline"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!-- Product card -->
@@ -51,9 +54,11 @@
                 <div class="row">
                     <div class="col-12 mb-2">
                         {% if item.product.image %}
-                        <img class="img-fluid image-ratio" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        <img class="img-fluid image-ratio" src="{{ item.product.image.url }}"
+                            alt="{{ item.product.name }}">
                         {% else %}
-                        <img class="img-fluid image-ratio" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                        <img class="img-fluid image-ratio" src="{{ MEDIA_URL }}noimage.png"
+                            alt="{{ item.product.name }}">
                         {% endif %}
                     </div>
                     <div class="col-12 mb-2 logo-font text-center">
@@ -67,7 +72,7 @@
                         {% include "bag/quantity_box.html" %}
                     </div>
                 </div>
-               <!-- Horizontal line at the end fo bag list -->
+                <!-- Horizontal line at the end fo bag list -->
                 <div class="row">
                     <div class="col mb-2">
                         <hr>
@@ -94,11 +99,13 @@
                     {% for item in bag_items %}
                     <tr class="bottom-border">
                         <td class="p-3 w-25">
-                        {% if item.product.image %}
-                            <img class="img-fluid image-ratio" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                        {% else %}
-                            <img class="img-fluid image-ratio" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                        {% endif %}
+                            {% if item.product.image %}
+                            <img class="img-fluid image-ratio" src="{{ item.product.image.url }}"
+                                alt="{{ item.product.name }}">
+                            {% else %}
+                            <img class="img-fluid image-ratio" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ item.product.name }}">
+                            {% endif %}
                         </td>
                         <td class="py-3 align-middle">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -150,13 +157,13 @@
             </div>
             {% else %}
             <!-- Empty Bag -->
-                <p class="lead my-5">Your bag is empty.</p>
-                <a href="{% url 'products' %}" class="bg-btn-color btn btn-lg btn-hov rounded-0 shadow logo-font my-5">
-                    <span>
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="logo-font">Keep Shopping</span>
-                </a>
+            <p class="lead my-5">Your bag is empty.</p>
+            <a href="{% url 'products' %}" class="bg-btn-color btn btn-lg btn-hov rounded-0 shadow logo-font my-5">
+                <span>
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="logo-font">Keep Shopping</span>
+            </a>
             {% endif %}
         </div>
     </div>
@@ -166,24 +173,26 @@
 {% block extra_js %}
 <script>
     // Update quantity on click
-    $('.update-link').click(function(e) {
+    $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
     });
 
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('data-id').split('remove_')[1];
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
 
         $.post(url, data)
-        .done(function() {
-            location.reload();
-        });
+            .done(function () {
+                location.reload();
+            });
     });
 </script>
-    <!-- Quantity Input JS -->
-    <script src="{% static 'js/quantity_input.js' %}"></script>
+<!-- Quantity Input JS -->
+<script src="{% static 'js/quantity_input.js' %}"></script>
 {% endblock %}

@@ -564,8 +564,6 @@ select option[value=""] {
     .nav-link { padding: 0.15rem; }
     .nav-link i.fa-lg { font-size: 1rem; }
     .navbar-toggler { padding: .6rem .6rem;font-size: 1rem; }
-    .bg-btn-color.btn.btn-hov.rounded-0 { margin-bottom: 1rem}
-    .increment-qty, .decrement-qty { margin-bottom: 0!important; }
 }
 
 
