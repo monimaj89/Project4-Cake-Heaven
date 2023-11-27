@@ -5,14 +5,14 @@
 {% block content %}
 
 <div class="container">
-    
+
     <div class="row">
         <div class="col text-center mt-3">
             {% if not current_categories %}
             <h2 class="logo-font text-black pink-bg mb-4 py-2 ps-3">Cakes</h2>
             {% else %}
             {% for c in current_categories %}
-                <h2 class="logo-font text-black pink-bg mb-4 py-2 ps-3">{{ c.friendly_name }}</h2>
+            <h2 class="logo-font text-black pink-bg mb-4 py-2 ps-3">{{ c.friendly_name }}</h2>
             {% endfor %}
             {% endif %}
         </div>
@@ -22,28 +22,40 @@
             <!-- Products sort and products No -->
             <div class="row mt-1 mb-2">
                 <!-- Sort dropdown -->
-                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end mt-1 mt-md-3 mt-md-0">
+                <div
+                    class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end mt-1 mt-md-3 mt-md-0">
                     <div class="sort-select-wrapper sort-box-border w-50">
                         <select id="sort-selector" class="custom-select custom-select-sm rounded-0">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                            </option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
+                                (low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                                (high to low)</option>
+                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>
+                                Rating (low to high)</option>
+                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>
+                                Rating (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
+                                (A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
+                                (Z-A)</option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                Category (A-Z)</option>
+                            <option value="category_desc"
+                                {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                         </select>
                     </div>
                 </div>
                 <!-- Products link & number of products -->
                 <div class="col-12 col-md-6 order-md-first">
-                    <p class="text-muted mt-3 text-center text-md-start">
+                    <p class="text-secondary mt-3 text-center text-md-start">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span class="small logo-font m-1"><a class="text-black me-1" href="{% url 'products' %}">All Cakes &amp; Treats</a> | </span>
+                        <span class="small logo-font m-1"><a class="text-black me-1" href="{% url 'products' %}">All
+                                Cakes &amp; Treats</a> | </span>
                         {% endif %}
-                        {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        {{ products|length }} Products{% if search_term %} found for
+                        <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>
@@ -75,8 +87,10 @@
                                     <!-- Display category -->
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
-                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fa-solid fa-cake-candles me-1"></i> {{ product.category.friendly_name }}
+                                        <a class="text-muted"
+                                            href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fa-solid fa-cake-candles me-1"></i>
+                                            {{ product.category.friendly_name }}
                                         </a>
                                     </p>
                                     {% endif %}
@@ -86,11 +100,36 @@
                                     {% else %}
                                     <small class="text-secondary">No Rating</small>
                                     {% endif %}
+                                    <!-- Edit and delete product links -->
                                     {% if request.user.is_superuser %}
-                                        <p class="mt-2">
-                                        <a class="text-success" href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                        </p>
+                                    <div class="mt-2">
+                                        <a class="text-success" href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a class="text-danger" data-toggle="modal"
+                                            href="#modal-{{ product.id }}">Delete</a>
+                                    </div>
+                                    <!--  Confirm modal structure -->
+                                    <div class="modal" id="modal-{{ product.id }}" tabindex="-1">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Delete product</h5>
+                                                    <button type="button" class="btn-close" data-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Do you want to delete this product
+                                                        <strong>"{{ product.name }}"</strong>?
+                                                        <br><strong>This cannot be undone.</strong></p>
+                                                    </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="text-success" href="" data-dismiss="modal">No!</a>
+                                                    <a class="text-danger"
+                                                        href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     {% endif %}
                                 </div>
                             </div>
@@ -106,7 +145,6 @@
 {% endblock %}
 
 {% block extra_js%}
-    <!-- Sort Box JS -->
-    <script src="{% static 'js/sort_box.js' %}"></script> 
+<!-- Sort Box JS -->
+<script src="{% static 'js/sort_box.js' %}"></script>
 {% endblock %}
-
