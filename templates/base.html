@@ -216,7 +216,7 @@
         <hr>
         <!-- Copyright lower footer -->
         <div class="text-center">
-            <p>&copy; 2023 Cake Heaven. All rights reserved.</p>
+            <p>&copy; Cake Heaven M.Majchrowicz <span id="current-year"></span></p>
             <p class="small fst-italic">Site is built for educational purposes and all products are entirely
                 fictional. Transactions are made using Stripe's test mode and no money or products will be sent or
                 received.</p>
@@ -230,6 +230,11 @@
     </script>
     <!-- Scroll Up Button -->
     <script src="{% static 'js/scroll_top.js' %}"></script>
+    <!-- Updates current year in the footer -->
+    <script>
+    const currentYear = document.querySelector("#current-year");
+    currentYear.innerText = new Date().getFullYear();
+    </script>
     {% endblock %}
 
     {% block extra_js%}
