@@ -41,14 +41,20 @@ body {
     --light-pink: #fde5ee;
 }
 
-
+/* ----------------- Font style */
 .font-title {
     font-family: "Great vibes", sans-serif;
 }
 
-
+/* ------------------- Pink background */
 .pink-bg {
     background-color: var(--light-pink) !important;
+}
+
+
+/* -------------------- Keep footer down on pages with not eough content */
+.padding-bottom {
+    padding-bottom: 9rem;
 }
 
 
@@ -232,12 +238,6 @@ body {
 
 .black-btn {
     min-width: 100px;
-}
-
-
-/* --------------------- Success page, keep footer down */
-.padding-bottom {
-    padding-bottom: 9rem;
 }
 
 
