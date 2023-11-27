@@ -3,15 +3,17 @@
 
 
 {% block content %}
+<!-- Add product container -->
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
                 <hr>
+                <!-- Header title -->
                 <h2 class="logo-font pink-bg mb-4 py-2 ps-3 text-center">Product Management</h2>
                 <h5 class="text-secondary">Add a Product</h5>
             </div>
         </div>
-
+        <!-- Add product form -->
         <div class="row">
             <div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
@@ -24,6 +26,7 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-end">
+                        <!-- Buttons -->
                         <a class="shop-now-button btn black-btn rounded-0 logo-font me-2" href="{% url 'products' %}">Cancel</a>
                         <button class="bg-btn-color btn btn-hov rounded-0 shadow logo-font" type="submit">Add Product</button>
                     </div>

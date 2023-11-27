@@ -4,8 +4,6 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 
 
-# Create your views here.
-
 
 def contact(request):
     # Handles Form Submission

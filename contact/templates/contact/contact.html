@@ -3,20 +3,21 @@
 
 
 {% block content %}
-
+<!-- Contact page container -->
 <div class="container">
     <div class="row bg-btn-color pt-3 mb-2 shadow">
         <div class="col-12 col-lg-10 offset-lg-5">
             <h3 class="logo-font mb-4">Contact us</h3>
         </div>
     </div>
-
+<!-- Contact form -->
     <div class="row">
         <div class="col-12 col-lg-6 offset-lg-3 mt-2">
             <p>Send us a message using the form below.</p>
             <form method="POST" action="{% url 'contact' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
+                <!-- Buttons -->
                 <div class="text-end">
                     <a class="bg-btn-color btn btn-hov rounded-0 shadow logo-font me-2 px-2 py-2" href="{% url 'products' %}">Cancel</a>
                     <button class="bg-btn-color btn btn-hov rounded-0 shadow logo-font px-2 py-2" type="submit">Send</button>
