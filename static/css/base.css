@@ -95,7 +95,7 @@ body {
 
 /* -------------------- Main page photo */
 .photo {
-    height: 400px;
+    height: 430px;
     background: url('/media/photo.jpg') no-repeat center center;
     background-size: cover;
 }
@@ -545,13 +545,17 @@ select option[value=""] {
   }
 
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .container { max-width: 100%; }
     .message-container {
         top: -18px;
         right: -5px;
 }
-  }
+    /* .photo {
+        height: 300px;
+  } */
+}
+
 
 
 @media (max-width: 331px) {
