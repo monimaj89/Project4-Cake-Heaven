@@ -154,8 +154,19 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
+    
+    #  Checks if the product is added to the bag
+    bag = request.session.get('bag', {})
+    if str(product.id) in bag:
+        #  Delete product from the bag
+        bag.pop(str(product.id))
+
+        # Updates bag in session
+        request.session['bag'] = bag
+
+    # Delete product from the page 
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
