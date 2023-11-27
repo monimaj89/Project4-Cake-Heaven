@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}- 404! Page Doesn't Exist!{% endblock %}
+
+
+{% block content %}
+
+<div class="container px-md-4 py-4 py-md-5 text-center">
+
+    <!-- Error Page Content -->
+    <div class="d-flex justify-content-center align-items-center mb-3 mt-4">
+        <img src="https://cake-heaven.s3.eu-west-2.amazonaws.com/media/error.webp" alt="Cartoon Bee" class="error-bee">
+        <h1 class="error-size text-center mx-3">404</h1>
+    </div>
+    <h5>OOPS! Page not found!</h5>
+    
+    <!-- Home Button -->
+    <div class="m-4">
+        <a href="{% url 'home' %}" class="bg-btn-color btn btn-lg btn-hov rounded-0 shadow logo-font my-5">
+            <button class="d-inline b">Go Home</button>
+        </a>
+    </div>
+</div>
+{% endblock %}

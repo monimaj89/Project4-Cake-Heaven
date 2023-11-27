@@ -537,6 +537,13 @@ select option[value=""] {
     border-radius: 0;
 }
 
+
+/* --------------------- 404 page */
+
+.error-size {
+    font-size: 80px;
+}
+
 /* ----------------------Media queries */
 @media (min-width: 1200px) {
     .container {
