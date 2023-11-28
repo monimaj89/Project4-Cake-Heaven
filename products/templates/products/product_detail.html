@@ -127,15 +127,17 @@
                         </div>
                         <!-- Buttons -->
                         <div class="col-12 mt-5">
-                            <a href="{% url 'products' %}"
-                                class="bg-btn-color btn btn-hov rounded-0 shadow logo-font me-2">
-                                <span>
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="logo-font">Keep Shopping</span>
-                            </a>
-                            <input type="submit" class="shop-now-button black-btn btn shadow rounded-0 logo-font"
-                                value="Add to Bag">
+                            <div class="d-flex justify-content-start">
+                                <a href="{% url 'products' %}"
+                                    class="bg-btn-color btn btn-hov rounded-0 shadow logo-font me-2">
+                                    <span>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="logo-font">Go back</span>
+                                </a>
+                                <input type="submit" class="shop-now-button black-btn btn shadow rounded-0 logo-font"
+                                    value="Add to Bag">
+                            </div>
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
