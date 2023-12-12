@@ -1,9 +1,10 @@
-from django.shortcuts import ( 
-    render, 
-    redirect, 
-    reverse, 
-    get_object_or_404, 
-    HttpResponse )
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
+    get_object_or_404,
+    HttpResponse
+    )
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -59,7 +60,7 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
         }
-        
+
         order_form = OrderForm(form_data)
 
         # Handles a valid form submission
@@ -69,10 +70,10 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
-            
+
             # Iterates through bag items to create line_items
             for item_id, item_data in bag.items():
-                
+
                 # Checks if product exists in DB
                 # and save it in an order_line_item
                 try:
@@ -87,7 +88,8 @@ def checkout(request):
                 # Error message if product doesn't exist
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag"
+                        "wasn't found in our database."
                         "Please call us for assistance!")
                     )
 
@@ -101,19 +103,21 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
 
             # Redirect user to checkout success page
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
 
             # Error message about invalid checkout form
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
-    # Handles GET method functionality
+        # Handles GET method functionality
         bag = request.session.get('bag', {})
 
         # Not allow to navigate to checkout with no items in bag
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         # Gets current bag contents from session
@@ -128,7 +132,8 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with any
+        # info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -188,7 +193,6 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \

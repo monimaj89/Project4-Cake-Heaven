@@ -11,13 +11,14 @@ import stripe
 import json
 import time
 
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
     def __init__(self, request):
         self.request = request
 
-#  Sending checkout confirmation email   
+    # Sending checkout confirmation email
     def _send_confirmation_email(self, order):
         """Send the user a confirmation email"""
         cust_email = order.email
@@ -27,14 +28,13 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
         )
-
 
     def handle_event(self, event):
         """
@@ -48,7 +48,7 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
-        
+
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
@@ -77,8 +77,10 @@ class StripeWH_Handler:
             # Checks if user wants to save info
             if save_info:
                 profile.default_phone_number = shipping_details.phone
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_street_address1 = (
+                    shipping_details.address.line1)
+                profile.default_street_address2 = (
+                    shipping_details.address.line2)
                 profile.default_town_or_city = shipping_details.address.city
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.default_country = shipping_details.address.country
@@ -108,7 +110,7 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
 
-                 # Sets value to True if order is found
+                # Sets value to True if order is found
                 order_exists = True
                 break
 
@@ -117,11 +119,13 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
 
-            # If order is found in DB returns message & sends confirmation email
+            # If order is found in DB returns
+            # message & sends confirmation email
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} |' +
+                'SUCCESS: Verified order already in database',
                 status=200)
         else:
             # If order is not found in DB create order
@@ -158,12 +162,13 @@ class StripeWH_Handler:
                     order.delete()
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
-                    status=500)  
-                    
+                    status=500)
+
         # Send confirmation email
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]} |' +
+            'SUCCESS: Created order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):

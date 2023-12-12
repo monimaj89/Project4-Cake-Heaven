@@ -10,7 +10,8 @@ class ProductForm(forms.ModelForm):
         fields = '__all__'
 
     # Set image field attributes
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -20,6 +21,3 @@ class ProductForm(forms.ModelForm):
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
-        # Adds styling classes to inputs
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0 mb-3 px-2 py-2 rounded-0 shadow text-black'
