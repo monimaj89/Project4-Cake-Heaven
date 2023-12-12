@@ -58,13 +58,6 @@ body {
 }
 
 
-/* -------------------- Close cross button */
-.btn-close:focus {
-    outline: 0;
-    box-shadow: var(--light-pink);
-    opacity: var(--bs-btn-close-focus-opacity);
-}
-
 
 /* ------------------ Banner animation */
 .baner-anim {
