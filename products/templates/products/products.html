@@ -94,12 +94,9 @@
                                         </a>
                                     </p>
                                     {% endif %}
-                                    {% if product.rating %}
-                                    <small class="text-secondary"><i class="fas fa-star me-1"></i>{{ product.rating }} /
+                                    <!-- Product rating -->
+                                    <small class="text-secondary"><i class="fas fa-star me-1"></i>{{ product.get_rating }} /
                                         5</small>
-                                    {% else %}
-                                    <small class="text-secondary">No Rating</small>
-                                    {% endif %}
                                     <!-- Edit and delete product links -->
                                     {% if request.user.is_superuser %}
                                     <div class="mt-2">
