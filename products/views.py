@@ -79,8 +79,13 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     # Display list of ingredients
-    ingredients = product.ingredients.replace('[', "").replace
-    (']', "").replace("'", "").split(',')
+    ingredients = (
+        product.ingredients
+        .replace('[', "")
+        .replace(']', "")
+        .replace("'", "")
+        .split(',')
+    )
 
     if request.method == 'POST':
         rating = request.POST.get('rating', 3)
