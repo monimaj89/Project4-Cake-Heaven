@@ -17,7 +17,6 @@
             "Vanilla Extract"
           ],
           "category":1,
-          "rating":4.6,
           "image_url":"https://www.pexels.com/https://images.pexels.com/photos/10975256/pexels-photo-10975256.jpeg?cs=srgb&dl=pexels-darko-trajkovi%C4%87-10975256.jpg&fm=jpg&w=640&h=960&_gl=1*1dw84c4*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyNDYuMC4wLjA",
           "image":"Birthdaycake.jpg"
        }
@@ -39,7 +38,6 @@
             "Vanilla Extract"
           ],
            "category":1,
-           "rating":4.6,
            "image_url":"https://www.pexels.com/https://images.pexels.com/photos/5487950/pexels-photo-5487950.jpeg?cs=srgb&dl=pexels-aitizaz-naqvi-5487950.jpg&fm=jpg&w=640&h=960&_gl=1*92td95*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyNTEuMC4wLjA",
            "image":"Birthdaycake1.jpg"
         }
@@ -63,7 +61,6 @@
             "Rasberry jam"
           ],
            "category":2,
-           "rating":4.4,
            "image_url":"https://www.pexels.com/https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?cs=srgb&dl=pexels-dmitry-zvolskiy-1721934.jpg&fm=jpg&w=640&h=959&_gl=1*892ihc*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEzMDYuMC4wLjA",
            "image":"Birthdaycake7.jpg"
         }
@@ -88,7 +85,6 @@
             "Strawberries"
           ],
            "category":2,
-           "rating":3.6,
            "image_url":"https://www.pexels.com/https://images.pexels.com/photos/2035735/pexels-photo-2035735.jpeg?cs=srgb&dl=pexels-cats-coming-2035735.jpg&fm=jpg&w=640&h=476&_gl=1*1ezszi2*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyNzUuMC4wLjA",
            "image":"Birthdaycake2.jpg"
         }
@@ -110,7 +106,6 @@
             "Soya"
           ],
            "category":3,
-           "rating":4.2,
            "image_url":"https://www.pexels.com/https://images.pexels.com/photos/2035735/pexels-photo-2035735.jpeg?cs=srgb&dl=pexels-cats-coming-2035735.jpg&fm=jpg&w=640&h=476&_gl=1*1ezszi2*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyNzUuMC4wLjA",
            "image":"Birthdaycake5.jpg"
         }
@@ -134,7 +129,6 @@
             "fresh fruits"
           ],
            "category":3,
-           "rating":5.0,
            "image_url":"https://www.pexels.com/https://images.pexels.com/photos/10577002/pexels-photo-10577002.jpeg?cs=srgb&dl=pexels-tubarones-photography-10577002.jpg&fm=jpg&w=640&h=960&_gl=1*cpei1k*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTE0MDcuMC4wLjA",
            "image":"Birthdaycake9.jpg"
         }
@@ -157,7 +151,6 @@
             "Cherry"
           ],
            "category":6,
-           "rating":4.3,
            "image_url":"https://www.pexels.com/https://images.pexels.com/photos/8478058/pexels-photo-8478058.jpeg?cs=srgb&dl=pexels-los-muertos-crew-8478058.jpg&fm=jpg&w=640&h=960&_gl=1*1e1047f*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEzNzkuMC4wLjA",
            "image":"wedding9.jpg"
         }
@@ -180,7 +173,6 @@
             "Vanilla Extract"
           ],
            "category":6,
-           "rating":4.5,
            "image_url":"https://www.pexels.com/https://images.pexels.com/photos/8245039/pexels-photo-8245039.jpeg?cs=srgb&dl=pexels-mikhail-nilov-8245039.jpg&fm=jpg&w=640&h=959&_gl=1*15wgc1c*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEzOTYuMC4wLjA",
            "image":"wedding10.jpg"
         }
@@ -203,7 +195,6 @@
             "Buttermilk"
           ],
            "category":8,
-           "rating":4.5,
            "image_url":"https://www.pexels.com/https://images.pexels.com/photos/265801/pexels-photo-265801.jpeg?cs=srgb&dl=pexels-pixabay-265801.jpg&fm=jpg&w=640&h=427&_gl=1*ebkgj4*_ga*NzcwNzUzOTk2LjE2Nzc2NjU0ODI.*_ga_8JE65Q40S6*MTY5NzU1MDYxOS4yMi4xLjE2OTc1NTEyODcuMC4wLjA",
            "image":"wedding4.jpg"
         }
