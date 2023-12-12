@@ -32,8 +32,7 @@
                 <!-- Display category -->
                 {% if product.category %}
                 <p class="small">
-                    <a class="text-secondary text-decoration-none"
-                        href="{% url 'products' %}?category={{ product.category.name }}">
+                    <a class="text-secondary" href="{% url 'products' %}?category={{ product.category.name }}">
                         <i class="fa-solid fa-cake-candles me-1"></i>{{ product.category.friendly_name }}
                     </a>
                 </p>
@@ -144,40 +143,45 @@
             </div>
         </div>
         <div class="col-12 p-0">
-        <p class="lead logo-font">Reviews</p>
-        {% if request.user.is_authenticated %}
-        <form method="POST" action="." class="p-3 pink-bg rounded-0">
-            {% csrf_token %}
-            <div>
-                <label>Rating</label><br>
-                <select name="rating">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3" selected>3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <div>
-                <label>Comment</label><br>
-                <textarea name="content"></textarea>
-            </div>
-            <div>
-                <button>Submit</button>
-            </div>
+       
+            <p class="lead logo-font">Reviews</p>
 
-        </form>
-        {% endif %}
+            {% if request.user.is_authenticated %}
+            <form method="POST" action="." class="p-3 pink-bg rounded-0">
+                {% csrf_token %}
+                <div>
+                    <label>Rating</label><br>
+                    <select name="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Comment</label><br>
+                    <textarea name="content"></textarea>
+                </div>
+                <div>
+                    <button>Submit</button>
+                </div>
 
-        {% for review in product.reviews.all %}
-            <div class="px-4 py-5 rounded-0 mb-4">
-                <strong>Rating:</strong> {{ review.rating }}/5 <br>
-                <strong>Date:</strong> {{ review.created_at|date:"Y-m-d" }} <br>
-                <strong>Comment:</strong>
-                {{ review.content }} <br>
-                <strong>Created by:</strong> {{ review.created_by }}
-            </div>
-        {% endfor %}
+            </form>
+            {% endif %}
+
+           
+                {% for review in product.reviews.all %}
+                <div class="px-4 py-5 rounded-0 mb-4">
+                    <strong>Rating:</strong> {{ review.rating }}/5 <br>
+                    <strong>Date:</strong> {{ review.created_at|date:"Y-m-d" }} <br>
+                    <strong>Comment:</strong>
+                    {{ review.content }} <br>
+                    <strong>Created by:</strong> {{ review.created_by }}
+                </div>
+                {% endfor %}
+                
+           
         </div>
     </div>
 </div>

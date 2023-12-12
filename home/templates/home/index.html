@@ -60,7 +60,7 @@
                                     <!-- Display category -->
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
-                                        <a class="text-secondary text-decoration-none"
+                                        <a class="text-secondary"
                                             href="{% url 'products' %}?category={{ product.category.name }}">
                                             <i class="fa-solid fa-cake-candles me-1"></i>{{ product.category.friendly_name }}
                                         </a>
