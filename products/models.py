@@ -34,18 +34,23 @@ class Product(models.Model):
     ingredients = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     is_featured = models.BooleanField(default=False)
-    rating = models.DecimalField(
-        max_digits=6,
-        decimal_places=2,
-        null=True,
-        blank=True
-        )
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         """ String representation of Product name """
         return self.name
+
+    def get_rating(self):
+        reviews_total = 0
+
+        for review in self.reviews.all():
+            reviews_total += review.rating
+
+        if reviews_total > 0:
+            return reviews_total / self.reviews.count()
+        
+        return 0
 
 
 class Review(models.Model):
