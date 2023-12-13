@@ -61,6 +61,14 @@
                 </table>
             </div>
         </div>
+        <div class="col-12 d-flex justify-content-start">
+
+            <!-- Link to change password -->
+             <a class="text-decoration-none float-end d-inline me-3" href="{% url 'account_email' %}">Manage Email</a>
+
+             <!-- Link to manage email -->
+             <a class="text-decoration-none float-end d-inline" href="{% url 'account_change_password' %}">Change Password</a>
+         </div>
     </div>
 </div>
 
