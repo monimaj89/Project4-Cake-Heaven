@@ -127,13 +127,13 @@
                         <div class="col-12 mt-5">
                             <div class="d-flex justify-content-start">
                                 <a href="{% url 'products' %}"
-                                    class="bg-btn-color btn btn-hov rounded-0 shadow logo-font me-2">
+                                    class="shop-now-button black-btn btn shadow rounded-0 logo-font me-2">
                                     <span>
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="logo-font">Go back</span>
                                 </a>
-                                <input type="submit" class="shop-now-button black-btn btn shadow rounded-0 logo-font"
+                                <input type="submit" class="bg-btn-color btn btn-hov rounded-0 shadow logo-font"
                                     value="Add to Bag">
                             </div>
                         </div>
@@ -143,7 +143,7 @@
             </div>
         </div>
         <div class="col-12 p-0">
-       
+            
             <p class="lead logo-font">Reviews</p>
 
             {% if request.user.is_authenticated %}
