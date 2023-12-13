@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
@@ -36,6 +36,13 @@ def profile(request):
 @login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
+
+
+    # Restrict page to order's associated user or superuser
+    if not request.user.is_superuser:
+        if request.user != order.user_profile.user:
+            messages.error(request, 'You can only view your own orders.')
+            return redirect(reverse('profile'))
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
