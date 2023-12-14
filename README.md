@@ -87,7 +87,7 @@ During the planning phase, a crucial step involved constructing a well-defined d
 
 ![Database Schema](media/docs/database.png)
 
-3. Wireframes
+2. Wireframes
 
 The wireframes were created using [Balsamiq](https://balsamiq.com/).
 
@@ -132,6 +132,47 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/).
 <details><summary>Contact Form</summary>
 <img src="media/docs/mobilecontact.png">
 </details>
+
+
+## Surface
+
+[Bootstrap](https://getbootstrap.com/) was used and customised for the front-end development
+
+### Colour
+The colors used on my website are simple. I decided on a white background with pink accents to emphasize the sweetness of the page
+
+![Colour Palette](media/docs/palette.png)
+
+Additionally, four colors were used for danger/warning/success/info features
+
+![Secondary colour](media/docs/secolour.png)
+
+### Typography
+Fonts was imported from [Google Fonts](https://fonts.google.com/)
+* Great Vibes has been used as a welcome header on home page
+
+![Great Vibes](media/docs/fontgreat.png)
+
+* Lato has been used as a main body font
+
+![Lato](media/docs/lato.png)
+
+* Sans serif is set as a backup if any of the fonts fail to load
+
+
+### Images and icons
+
+All images are fully credited [here](#credits)
+
+* Favicon - borrowed from [Here](https://favicon.io/)
+
+![Favicon](media/docs/favicon.png)
+
+* 404 error page borrowed from rawpixel.com on [Freepik](https://www.freepik.com/)
+
+![404page](media/docs/error.webp)
+
+
 
 ## Note
 * Commit from 8 Nov - Site Deployment - An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet.
