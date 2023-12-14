@@ -237,6 +237,63 @@ Contains all products within all categories. On the top user can sort and filter
 
   ![Bag Buttons](media/docs/checkoutbutt.png)
 
+## Checkout 
+Guest user can fill his details in the form provided, which can be already saved for logged in users. Checkout page also contains order summary with all product details
+
+![Checkout](media/docs/Checkout.png)
+
+  * Contact form link - Directs to contac form page, where user can send all inquiries
+
+  * Card detail box - a simple payment form using Stripe for secure and easy purchase
+
+  * Buttons - Go back to bag button, to see user's bag, and Place order, with warning info about the amount being charged
+
+  ![Payment Box with Buttons](media/docs/stripepaym.png)
+
+  * Checkout Process - after order being placed user see a loading spin page, and then the stripe window to confirm payment
+
+  ![Loading spin](media/docs/load.jpeg)
+
+  * Success Page - after order being placed and payment confirmed user is directed to the success checkout page with order and details summary. User gets a confirmation email on his address
+
+## Profile Page 
+Any logged in user has access to his profile page which contains:
+
+  * Personal info details - phone number and address which can be updated
+  * Order history with order number which directs to order summary page
+
+![Profil Page](media/docs/profile.png)
+
+## Management Site 
+Form created for admin to easy add product to the page
+
+![Add Product form](media/docs/addprod.png)
+
+## Contact Form 
+A form connected with company email address for user to easy and fast contact
+
+![Contact Form](media/docs/contactform.png)
+
+  * Thank you page - after sending the inquiry user is directed into Thank you page saying that company will contact back as soon as possible
+
+  ![Thank you page](media/docs/thankyou.png)
+
+## Authentication
+
+The project uses AllAuth to implement User login and authentication functionality. AllAuth comes with a whole load of backend functionality and front end templates that make the user, registration, sign in/out and user management easy and quick to create
+
+Main templates provided by AllAuth:
+
+  * Register - function provided straight from an account navbar, allows for new user to register on a page, contains a 'sign-in' link for already registered users. Successfully registered user receives a confirmation email with verification code
+  * Sign In - For already registered users, accessible from an account navbar, contains a 'register' link for new users. User can sign in using Username or email, and tick the box to remember him. Page also contains a "Forgot password" link if user can not log in
+  * Sign Out - Accessible from an account navbar, redirects to page where user can confirm if ready to log out. After signing out the bag contect is removed from the session.
+  * Forgot password - Available for already registered user on 'sign in' page, required an email address existing in database. Send an email with password reset link, where user is able to reset his password and login again.
+
+## Error Page 
+A 404 error page created for a positive user experiance when lost on non-existent page, with button to quick get back to home page
+
+![404 Page](media/docs/error.png)  
+
 
 ## Note
 * Commit from 8 Nov - Site Deployment - An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet.
