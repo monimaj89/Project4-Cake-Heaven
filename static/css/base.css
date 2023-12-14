@@ -58,7 +58,6 @@ body {
 }
 
 
-
 /* ------------------ Banner animation */
 .baner-anim {
     font-weight: bold;
@@ -114,6 +113,18 @@ body {
 .shop-now-button:focus {
     background: #222 !important;
     color: white !important;
+}
+
+/* --------------------- Remove button */
+.remove-btn {
+    background-color: #dc3545;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.remove-btn:hover {
+    background-color: #931a26;
+    color: #fff;
 }
 
 /* ------------------- Search bar */
