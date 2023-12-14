@@ -74,6 +74,65 @@ Project was created using Python, Django, HTML5, CSS3, and JavaScript. The data 
 * Discount vouchers
 * User's wishlist
 
+## Structure
+
+The website structure is divided into many separate pages that are displayed depending on the type of user. The details are displayed on flow diagram below build using [Lucidchart](https://www.lucidchart.com/pages/)
+ 
+![Flow Diagram](media/docs/Diagram.png)
+
+## Skeleton
+
+1. Database Schema
+During the planning phase, a crucial step involved constructing a well-defined database schema to facilitate the development process. To visually represent the database, I used [DrawSQL](https://drawsql.app/), which proved to be a valuable tool throughout the development journey. The site uses a relational database model using Postgres (Elephant SQL). Several models were adapted from the Boutique Ado walkthrough (User, Email, UserProfile, Category, and Product). Additionally, two original models were introduced, Contact form and Product review.
+
+![Database Schema](media/docs/database.png)
+
+3. Wireframes
+
+The wireframes were created using [Balsamiq](https://balsamiq.com/).
+
+**Desktop**
+
+<details><summary>Home Page</summary>
+<img src="media/docs/">
+</details>
+<details><summary>Products Page</summary>
+<img src="media/docs/">
+</details>
+<details><summary>Profile Page</summary>
+<img src="media/docs/">
+</details>
+<details><summary>Contact Form</summary>
+<img src="media/docs/">
+</details><br>
+
+**Tablet**
+
+<details><summary>Home Page</summary>
+<img src="media/docs/">
+</details>
+<details><summary>Profile Page</summary>
+<img src="media/docs/">
+</details>
+<details><summary>Contact Form</summary>
+<img src="media/docs/">
+</details><br>
+
+**Mobile**
+
+<details><summary>Home Page</summary>
+<img src="media/docs/">
+</details>
+<details><summary>Product Page</summary>
+<img src="media/docs/">
+</details>
+<details><summary>Profile Page</summary>
+<img src="media/docs/">
+</details>
+<details><summary>Contact Form</summary>
+<img src="media/docs/">
+</details>
+
 ## Note
 * Commit from 8 Nov - Site Deployment - An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet.
 * Credentials exposed - My AWS access and secret keys had been committed and pushed before I manage to hide them. Both keys were generated once again and switched.
