@@ -94,43 +94,43 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/).
 **Desktop**
 
 <details><summary>Home Page</summary>
-<img src="media/docs/">
+<img src="media/docs/deshome.png">
 </details>
 <details><summary>Products Page</summary>
-<img src="media/docs/">
+<img src="media/docs/desprod.png">
 </details>
 <details><summary>Profile Page</summary>
-<img src="media/docs/">
+<img src="media/docs/desprofile.png">
 </details>
 <details><summary>Contact Form</summary>
-<img src="media/docs/">
+<img src="media/docs/descontact.png">
 </details><br>
 
 **Tablet**
 
 <details><summary>Home Page</summary>
-<img src="media/docs/">
+<img src="media/docs/ipadhome.png">
 </details>
 <details><summary>Profile Page</summary>
-<img src="media/docs/">
+<img src="media/docs/ipadprofile.png">
 </details>
 <details><summary>Contact Form</summary>
-<img src="media/docs/">
+<img src="media/docs/ipadcontact.png">
 </details><br>
 
 **Mobile**
 
 <details><summary>Home Page</summary>
-<img src="media/docs/">
+<img src="media/docs/mobilehome.png">
 </details>
 <details><summary>Product Page</summary>
-<img src="media/docs/">
+<img src="media/docs/mobileprod.png">
 </details>
 <details><summary>Profile Page</summary>
-<img src="media/docs/">
+<img src="media/docs/mobileprofile.png">
 </details>
 <details><summary>Contact Form</summary>
-<img src="media/docs/">
+<img src="media/docs/mobilecontact.png">
 </details>
 
 ## Note
