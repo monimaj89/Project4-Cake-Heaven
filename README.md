@@ -173,6 +173,70 @@ All images are fully credited [here](#credits)
 ![404page](media/docs/error.webp)
 
 
+# Features
+
+## Home Page
+
+![Home Page](media/docs/homepage.png)
+
+  * Animated banner - located at the top of the page, an animated banner informs the user about free delivery and the deadline for ordering next day delivery
+
+  ![Order By](media/docs/orderby.png)
+
+  ![Free delivery](media/docs/freedel.png)
+
+  * Logo, Search Bar, account icon and shopping Bag - Logo is a simple company name, using search bar user can search for his favoutire flavours. Through 'My Account' user can register or login, already logged in user can also go to his profile page, for admin there is also management page. Shopping bag change the icon when full
+
+  ![Logo Navbar](media/docs/logonav.png)
+  ![Full Bag icon](media/docs/fullbag.png)
+
+  * Main navbar - User can choose his favourite cakes using dropdown menu with categories
+
+  ![Main Navbar](media/docs/mainnav.png)
+
+  * Welcome Banner - Main banner with welcome text, an image and Shop now button, which directs to all products page
+
+  ![Main Banner](media/docs/mainbanner.png)
+
+  * Featured cakes - a gallery with our featured cakes
+
+  ![Featured cakes](media/docs/featured.png)
+
+  * Footer - contains general info about our bakery, contact us form, bakery address and social links. On the bottom there is a copyright info
+
+  ![Footer](media/docs/footer.png)
+
+## Products Page 
+Contains all products within all categories. On the top user can sort and filter according to name, category, price and rating
+
+![Product Page](media/docs/product.png)
+
+  * Product detail - a separate card with all product's details as a name, price, rating, description with ingredients and quantity
+
+  ![Detail Card](media/docs/proddetail.png)
+
+  * Reviews - Below the detail card user can see all the review from other users, and logged in user can add his own review
+
+  ![Reviews](media/docs)
+
+  * Go Back/Add to Bag Buttons - Buttons to go back to products page, or to add product to the bag
+
+  ![Buttons](media/docs/prodbutton.png)
+
+## Shopping Bag
+
+  * Empty Bag - if the bag remains empty, user can only see a button to keep shopping which directs to products page
+
+  ![Empty Bag](media/docs/emptybag.png)
+
+  * Bag with product - contains summary of order with update quantity function and delete products function. Below summary there is a total of all products with info how much more user can spend for free delivery
+
+  ![Full Bag](media/docs/fullshopbag.png)
+
+  * Buttons - Keep shopping button to go back to product page and Secure Checkout button for checkout
+
+  ![Bag Buttons](media/docs/checkoutbutt.png)
+
 
 ## Note
 * Commit from 8 Nov - Site Deployment - An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet.
