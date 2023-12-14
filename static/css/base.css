@@ -471,6 +471,14 @@ select option[value=""] {
     overflow-y: auto;
 }
 
+.text-success:hover {
+    color: #114b23 !important;
+}
+
+.text-danger:hover {
+    color: #931a26 !important;
+}
+
 /* Allauth form formatting */
 
 
