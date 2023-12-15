@@ -356,6 +356,244 @@ A 404 error page created for a positive user experiance when lost on non-existen
   * LightHouse - for testing performance
   * Gmail - for sending emails using the SMTP server
 
+## All testing undertaken for this project can be found in the [Testing documentation](/TESTING.md)
+
+
+# Deployment
+
+## Project creation
+I used the [CI GitPod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) to create this project and used GitPod as my IDE.
+
+From the CI GitPod template above the steps to create this project were:
+1. Click on 'Use this template' and select 'Create a new repository'
+2. Enter your chosen repo name
+3. Click 'Create Repository'
+4. Click on the green GitPod button
+5. Choose New workspace picking first one from the list
+6. Click 'Continue'
+
+## Deploy the App
+### Set Up the database
+1. Go to [ElephantSQL](https://www.elephantsql.com/) and click on 'get a managed database'
+2. Select 'Tiny Turtle'
+3. Sign in using your GitHub account & authorise ElephantSQL to access your GitHub account
+4. Set up a team and go through the login credential process or log in if you already have an account
+5. Once you are logged in name your plan (usually the project name)
+6. Select your nearest region
+7. If you're happy click on 'create instance'
+8. Go to your dashboard (click on the ElephantSQL logo) and click on the instance name
+9. Copy the database URL for later use
+
+### Set up Heroku
+1. Go to [Heroku](https://www.heroku.com/) and log in/register
+2. Click on the 'New' button then 'create new app'
+3. Name your app and select your nearest region
+4. With your app set up go to the app's settings tab and under config variable click on 'reveal config variables' and add a new variable with the Key of `DATABASE_URL` and the value as the database URL that you copied from ElephantSQL
+5. Back in GitPod go to settings.py and paste the following in to your DATABASE section to tell it to connect to the new database. **Warning - do not push your code to GitHub whilst this value is in your settings.py, it is a secret value that must not be shared, we will remove it later**
+
+```
+DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('your elephanySQL database url here'))
+    }
+```
+
+6. In you GitPod terminal type `python3 manage.py showmigrations` to check you are connected to the new database, if you are you will see a list of migrations with no ticks next to them
+7. Run the following command `python3 manage.py migrate` to migrate the database structure from your project to the new database
+8. Any data that you have added to your SQLite database will not transfer to the new one. You will need to populate the site on the deployed app once it is up and running or using Fixtures (JSON files with all your database content) if you have them. 
+9. Create a superuser for your deployed site and new database (this will allow you to check if the database is working and access the site admin on the deployed site) using the following command in the terminal: `python3 manage.py createsuperuser` and set up login details for them following the instructions.
+10. Go to the ElephanySQL site, click on your database, go to the browser tab and click on 'table queries' and select 'auth_user (public)' and click on execute, you should see your newly created user.
+11. You now need to remove your new database settings from settings.py and set it up to know which version of the site you are on (development or live) to know which database to use. Go back to your GitPod dashboard, click on your avatar to go your your GitPod user settings and select 'variables'
+12. Add a key of DEVELOPMENT and a value of True
+13. Got to your settings.py file to the DATABASES section and replace what's there with the following code:
+
+```
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+```
+
+14. Push your code. Your deployed database is set up and GitPod knows which one to use for which version of the site.
+
+### Deploying to Heroku
+
+1. Create a Procfile in your app in the root directory with the following content 'web: gunicorn cake_heaven.wsgi:application'
+2. Log in to Heroku using the GitPod terminal using the command 'Heroku login' and enter your Heroku email and password
+  - if you have 2 factor authentication set up you will need to use 'Heroku login -i' followed by your email and your Heroku API key as the password.
+3. Temporarily disable Heroku from collecting static files during deployment using the command 'heroku config:set DISABLE_COLLECTSTATIC=1 --app heroku-app-name'
+4. Commit and push your changes to GitHub
+5. Then to deploy your site to Heroku use the command 'git push Heroku main'
+6. Your site will now be deployed without any of the static files
+7. Back in GitPod go to settings.py and add your deployed site's URL to the ALLOWED_HOSTS list
+8. Git add, commit and push again and then 'git push Heroku main' to push your changes
+11. Once the site has finished deploying you should be able to navigate to the deployed site's URL and see your site
+12. Replace the Django secret key in your settings.py (if you included it there) with an environment variable to keep it safe. You can use a Django secret key generator online e.g. [djecrety](https://djecrety.ir/), copy the key it provides.
+13. Go to your Heroku app's dashboard, open settings and reveal config variables and add a new variable with a key of SECRET_KEY and a value of what you just copied.
+14. In GitPod, if you have used your secret key in settings.py, go back to your GitPod dashboard, click on your avatar to go your your GitPod user settings and select 'variables'
+15. Add a key of SECRET_KEY and a Django secret key
+16. In settings.py change the SECRET_KEY to 'SECRET_KEY = os.environ.get('SECRET_KEY', '')'
+17. Below it change the value of DEBUG to the following 'DEBUG = 'DEVELOPMENT' in os.environ` to dynamically change whether the app is in DEBUG mode depending on whether it is the development or deployed site
+18. Commit ang push changes again and then 'git push Heroku main' to push your changes
+19. To enable automatic deployment, on Heroku account, go to 'Deploy' tab, scroll down and click on 'Enable Automatic Deploys'
+
+
+### Set Up AWS to store static and media files
+
+1. Sign up to AWS [here](https://aws.amazon.com/).
+2. Created an account and logged in, under the All Services>Storage menu, click the link that says S3.
+3. On the S3 page create a new bucket. Click the orange button that says 'Create Bucket'
+4. Name the bucket and select the closest region to you
+5. Under 'Object Ownership' select 'ACLs enabled' and leave the Object Ownership as Bucket owner preferred 
+6. Uncheck the 'Block all public access' checkbox and check the warning box to acknowledge that the bucket will be made public, then click create bucket 
+7. Once created, click the bucket's name and navigate to the properties tab. Scroll to the bottom and under 'Static website hosting' click 'edit' and change the Static website hosting option to 'enabled'. Copy the default values for the index and error documents and click 'save changes'
+8. Now navigate to the permissions tab, scroll down to the Cross-origin resource sharing (CORS) section, click edit and paste in the following code:  
+    ```
+    [
+        {
+            "AllowedHeaders": [
+            "Authorization"
+            ],
+            "AllowedMethods": [
+            "GET"
+            ],
+            "AllowedOrigins": [
+            "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+    ```
+9. Then scroll back up to the 'Bucket Policy' section. Click 'edit' and then 'Policy generator'. This should open the AWS policy generator page
+10. Under the 'select type of policy' dropdown menu, select 'S3 Bucket Policy', and inside 'Principle' allow all principals by typing a '*'
+11. From the 'Actions dropdown menu select 'Get object'. Then head back to the previous tab and locate the Bucket ARN number. Copy that, return to the policy generator and paste it in the field labelled Amazon Resource Name (ARN)
+12. Once that's completed click 'Add statement', then 'Generate Policy'. Copy the policy that's been generated and paste it into the bucket policy editor
+13. Before you click save, add a '/*' at the end of your resource key. This is to allow access to all resources in this bucket
+14. Once those changes are saved, scroll down to the Access control list (ACL) section and click 'edit'
+15. Next to 'Everyone (public access)', check the 'list' checkbox. This will pop up a warning box that you will also have to check. Once that's done click 'save'
+
+### IAM
+When your bucket is ready you need to create a user to access it.
+
+1. In the top of the window search for IAM and select it.
+2. Once on the IAM page, click 'User Groups' from the side bar, then click 'Create group'
+3. Name the group 'manage-*your-project-name*' and click 'Create group' at the bottom of the page
+4. From the sidebar click 'Policies', then 'Create policy'
+5. Go to the JSON tab and click 'import managed policy'. Search for 'S3' and select 'AmazonS3FullAccess' and click import
+6. Once this is imported you need to make small changes. Go back to your bucket and copy your ARN number. Head back to this policy and update the Resource key to include your ARN, and another line with your ARN followed by a /*. It should look like this: 
+    ```
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "s3:*",
+                    "s3-object-lambda:*"
+                ],
+                "Resource": [
+                    "YOUR-ARN-NO-HERE",
+                    "YOUR-ARN-NO-HERE/*"
+                ]
+            }
+        ]
+    }
+    ```
+7. Click 'Next: Tags', 'Next: Review', and on this page give the policy a name, and description, and click 'Create policy'
+8. This will take you back to the policy page where you should be able to see your newly created policy. Now you need to attach it to the group you created before 
+9. Click 'User groups', and click the your group. Go to the permissions tab and click 'Add permission' and from the dropdown click 'Attach policies'
+10. Find the policy you just created, select it and click 'Add permissions'.
+11. Finally you need to create a user to put in the group. Select users from the sidebar and click 'Add user' 
+12. Give your user a user name, check 'Programmatic Access', then click 'Next: Permissions'
+13. Select your group that has the policy attached and click 'Next: Tags', 'Next: Review', then 'Create user'
+14. On the next page, download the CSV file. This contains the user's access key and secret access key for later use
+
+### Connect AWS to django
+
+After creating a S3 bucket you need to connect it to django
+
+1. Install two packages, Boto3 and Django storages, by running these commands:  
+    ```
+    pip3 install boto3
+    pip3 install django-storages
+    ```
+    And remember to freeze the requirements with:  
+    ```
+    pip3 freeze > requirements.txt
+    ```
+2. Add 'storages' to your installed apps section inside your settings.py file
+3. Next, in your setting.py file on the bottom, add an if statement to check if there is an environment variable called USE_AWS. This variable does not exist yet but we will add it later. Inside the if statement, write the following settings so it looks like this:  
+    ```
+    if 'USE_AWS' in os.environ:
+        AWS_STORAGE_BUCKET_NAME = 'insert-your-bucket-name-here'
+        AWS_S3_REGION_NAME = 'insert-your-region-here'
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    ```
+4. Next, go back to heroku and in the settings tab, under config vars, add keys with values that were downloaded earlier in the CSV file.
+5. Add the key USE_AWS, and set the value to True.
+6. Remove now the DISABLE_COLLECTSTAIC variable, since django should now collect static files automatically and upload them to S3.
+7. Now head back to the settings.py file in your django project to the if statement you wrote earlier and inside the statement add this line setting:  
+    ```
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    ```
+    This will tell django where your static files will be coming from in production.
+8. Next in the root directory of your project create a file called 'custom_storages.py'. Inside this file import your settings as well as the s3boto3 storage class. Insert this code at the top of the file:  
+    ```
+    from django.conf import settings
+    from storages.backends.s3boto3 import S3Boto3Storage
+    ```
+9. Then underneath the imports insert these two classes:  
+    ```
+    class StaticStorage(S3Boto3Storage):
+        location = settings.STATICFILES_LOCATION
+
+
+    class MediaStorage(S3Boto3Storage):
+        location = settings.MEDIAFILES_LOCATION
+    ```
+    Now define the STATICFILES_LOCATION and MEDIAFILES_LOCATION
+10. Back in the settings.py file, underneath the bucket config settings but still inside the if statement, add these lines:  
+    ```
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    ```
+11. Next to override and explicitly set the URLs for static and media files using your custom domain and new locations. To do this add these two lines inside the same if statement:  
+    ```
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    ```
+12. Save, add, commit and push your changes, you should see that your S3 bucket now has a static folder with all your static files inside 
+13. Add this piece of code to let the browser know that its ok to cache static files for a long time:    
+    ```
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    ```
+14. Back in S3, go to your bucket and click 'Create folder'. Name the folder 'media' and click 'Save'. 
+15. Inside the new media folder you just created, click 'Upload', 'Add files', and then select all the images that you are using on your site.
+16. Then under 'Permissions' select the option 'Grant public-read access' and click upload. Check the warning checkbox
+17. And that is it. All your static files and media files should be automatically linked from django to your S3 bucket
+
+### Set up Stripe Payments
+
+1. Log in to Stripe, click on the developers tab and API keys copy the API key and set them in Heroku as config variables in the following:
+
+- STRIPE_PUBLIC_KEY: Stripe publishable key goes here
+- STRIPE_SECRET_KEY: Stripe secret key goes here
+
+2. Back in Stripe set up a new webhook for your deployed site by clicking on webhooks, click on 'add endpoint' and paste in your deployed site's URL followed by /checkout/wh/ and set it to listen for all events.
+3. Click on your newly set up webhook and click on 'Signing Secret' at the top to reveal the secret value. Copy it and set it as a new config variable in Heroku:
+- STRIPE_WH_SECRET: Signing secret from new webhook.
 
 ## Note
 * Commit from 8 Nov - Site Deployment - An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet.
