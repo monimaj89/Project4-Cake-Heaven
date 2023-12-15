@@ -152,18 +152,18 @@
                 <form method="POST" action="." class="pt-3 rounded-0">
                     {% csrf_token %}
                     <div>
-                        <label>Rating</label><br>
-                        <select name="rating" class="form-select w-50" aria-label="Default select example">
+                        <label class="mb-2">Rating</label><br>
+                        <select name="rating" class="form-select w-50" aria-label="Select Rating">
                             <option value="1">1</option>
                             <option value="2">2</option>
-                            <option value="3" selected>3</option>
+                            <option value="3">3</option>
                             <option value="4">4</option>
-                            <option value="5">5</option>
+                            <option value="5" selected>5</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="Review" class="form-label">Your Review</label>
-                        <textarea name="content" class="form-control" id="Review" rows="4"></textarea>
+                        <label for="Review" class="form-label my-3">Your Review</label>
+                        <textarea name="content" class="form-control" placeholder="Leave your review here" id="Review" rows="4"></textarea>
                     </div>
                     <div>
                         <button class="shop-now-button black-btn btn shadow rounded-0 logo-font me-2 my-2 float-end">Submit</button>
