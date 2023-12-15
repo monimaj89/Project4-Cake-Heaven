@@ -142,47 +142,43 @@
                 </form>
             </div>
         </div>
-        <div class="col-12 p-0">
-            
-            <p class="lead logo-font">Reviews</p>
-
+    </div>
+     <!--  Reviews -->
+    <div class="row table-size mx-2 my-5">
+        <p class="lead logo-font text-center">Reviews</p>
+        <div class="col-12 mt-2 px-2 pink-bg shadow">
             {% if request.user.is_authenticated %}
-            <form method="POST" action="." class="p-3 pink-bg rounded-0">
-                {% csrf_token %}
-                <div>
-                    <label>Rating</label><br>
-                    <select name="rating">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3" selected>3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Comment</label><br>
-                    <textarea name="content"></textarea>
-                </div>
-                <div>
-                    <button>Submit</button>
-                </div>
-
-            </form>
+                <form method="POST" action="." class="pt-3 rounded-0">
+                    {% csrf_token %}
+                    <div>
+                        <label>Rating</label><br>
+                        <select name="rating" class="form-select w-50" aria-label="Default select example">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Review" class="form-label">Your Review</label>
+                        <textarea name="content" class="form-control" id="Review" rows="4"></textarea>
+                    </div>
+                    <div>
+                        <button class="shop-now-button black-btn btn shadow rounded-0 logo-font me-2 my-2 float-end">Submit</button>
+                    </div>
+                </form>
             {% endif %}
-
-           
-                {% for review in product.reviews.all %}
-                <div class="px-4 py-5 rounded-0 mb-4">
-                    <strong>Rating:</strong> {{ review.rating }}/5 <br>
-                    <strong>Date:</strong> {{ review.created_at|date:"Y-m-d" }} <br>
-                    <strong>Comment:</strong>
-                    {{ review.content }} <br>
-                    <strong>Created by:</strong> {{ review.created_by }}
-                </div>
-                {% endfor %}
-                
-           
         </div>
+        {% for review in product.reviews.all %}
+            <div class="col-12 py-3 mt-2 shadow">
+                <strong>Rating:</strong> {{ review.rating }}/5 <br>
+                <strong>Review:</strong>
+                {{ review.content }} <br>
+                <strong>Created by:</strong> {{ review.created_by }} <br>
+                <strong>Date:</strong> {{ review.created_at|date:"Y-m-d" }}
+            </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

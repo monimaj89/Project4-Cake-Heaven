@@ -26,6 +26,22 @@ body {
     padding-bottom: 9rem;
 }
 
+/* Override bootstrap forms border colour on focused inputs */
+
+.form-select:focus {
+    border-color: #fde5ee;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(224, 174, 226, 0.25);
+}
+
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #fde5ee;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(224, 174, 226, 0.25);
+}
 
 /* ------------------ Banner animation */
 .baner-anim {
@@ -532,6 +548,12 @@ select option[value=""] {
     .navbar-toggler { padding: .6rem .6rem;font-size: 1rem; }
 }
 
+
+@media (min-width: 992px) {
+    .table-size {
+        width: 50%;
+    }
+  }
 
 
 @media (max-width: 331px) {
