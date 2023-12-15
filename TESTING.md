@@ -4,7 +4,7 @@
 
 This is the testing documentation for my web application Cake heaven. Full [README available here](/README.md)
 
-See the live site [here](https://cake-heaven-8414245a4be7.herokuapp.com/).3
+See the live site [here](https://cake-heaven-8414245a4be7.herokuapp.com/)
 
 # Validation 
 ## HTML Validation
@@ -38,7 +38,7 @@ I run the CSS code through [W3C CSS Validator](https://jigsaw.w3.org/css-validat
 
 * Imported style sheets - This refers to Google's font import, and aa it is a standard way to import fonts directly in to the CSS, I've decided to ignore thatw arning
 * Vendor extension error - there is nothing to do about this since those extensions help support browser compatibility efforts 
-* Same color for background-color and border-color - necessary action to override Bootstrap styling
+* Same colour for background-color and border-color - necessary action to override Bootstrap styling
 
 <details><summary>Css Warnings</summary>
 <img src="media/docs/csswarning.png">
@@ -69,4 +69,142 @@ I ran the JavaScript code through [JSHint](https://jshint.com/), which only show
 </details>
 <details><summary>Update/Remove (Bag)</summary>
 <img src="media/docs/updaterem.png">
+</details>
+
+## Python Linting
+I ran the code through [CI Python Liner](https://pep8ci.herokuapp.com/), which shows a multiple errors mostly regarding blank lines, missing whitespaces and too long lines, which all were fixed.
+
+### Details of every checked code below
+
+| **App** | **File** | **Result** |
+|---|---|---|
+| cake_heaven | settings | PASS |
+| cake_heaven | urls | PASS |
+| bag | urls | PASS |
+| bag | views | PASS |
+| bag | contexts |  PASS |
+| bag | test_views |  PASS |
+| checkout | admin |  PASS |
+| checkout | forms |  PASS |
+| checkout | models | PASS |
+| checkout | signals |  PASS |
+| checkout | urls |  PASS |
+| checkout | views |  PASS |
+| checkout | webhook_handler |  PASS |
+| checkout | webhooks |  PASS |
+| home | test_views | PASS |
+| contact | admin |  PASS |
+| contact | forms |  PASS |
+| contact | models |  PASS |
+| contact | urls |  PASS |
+| contact | views |  PASS |
+| products | admin |  PASS |
+| products | forms | PASS |
+| products | models |  PASS |
+| products | urls |  PASS |
+| products | views |  PASS |
+| products | widgets |  PASS |
+| profiles | admin |  PASS |
+| profiles | forms |  PASS |
+| profiles | models |  PASS |
+| profiles | urls |  PASS |
+| profiles | views |  PASS |
+
+## Lighthouse Testing
+The site was run through Google Chrome Dev Tools Lighthouse on desktop and mobile devices. While on desktop the results are satisfactory, unfortunatelly on mobile devices the performance results are mostly around 70%. The main reasons for the low result were:
+* Render-blocking resources - scripts, stylesheets, and HTML imports that block or delay the browser from rendering page content to the screen, which I wasn't able to improve
+* Unused JavaScript - refers to Bootstrap and Stripe scripts
+* Images in .jpg format - All products images are already in jpg format
+
+For full results see dropdown below
+
+### Desktop
+
+<details><summary>Home Page</summary>
+<img src="media/docs/homedes.png">
+</details>
+<details><summary>Product Page</summary>
+<img src="media/docs/proddes.png">
+</details>
+<details><summary>Product Detail Page</summary>
+<img src="media/docs/detaildes.png">
+</details>
+<details><summary>Bag Page</summary>
+<img src="media/docs/bagdes.png">
+</details>
+<details><summary>Checkout Page</summary>
+<img src="media/docs/checkoutdes.png">
+</details>
+<details><summary>Success Checkout Page</summary>
+<img src="media/docs/succesdes.png">
+</details>
+<details><summary>Profile Page</summary>
+<img src="media/docs/profilesdes.png">
+</details>
+<details><summary>Management Site</summary>
+<img src="media/docs/managemdes.png">
+</details>
+<details><summary>Contact Form</summary>
+<img src="media/docs/contactdes.png">
+</details>
+<details><summary>Edit Products</summary>
+<img src="media/docs/editdes.png">
+</details>
+<details><summary>Login Page</summary>
+<img src="media/docs/logindes.png">
+</details>
+<details><summary>Register Page</summary>
+<img src="media/docs/registerdes.png">
+</details>
+<details><summary>Manage Email</summary>
+<img src="media/docs/managedes".png>
+</details>
+<details><summary>Change Password</summary>
+<img src="media/docs/changepassdes.png">
+</details>
+
+
+### Mobile
+
+<details><summary>Home Page</summary>
+<img src="media/docs/homemob.png">
+</details>
+<details><summary>Product Page</summary>
+<img src="media/docs/prodmob.png">
+</details>
+<details><summary>Product Detail Page</summary>
+<img src="media/docs/detailmob.png">
+</details>
+<details><summary>Bag Page</summary>
+<img src="media/docs/bagmob.png">
+</details>
+<details><summary>Checkout Page</summary>
+<img src="media/docs/checkoutmob.png">
+</details>
+<details><summary>Success Checkout Page</summary>
+<img src="media/docs/successmob.png">
+</details>
+<details><summary>Profile Page</summary>
+<img src="media/docs/profilesmob.png">
+</details>
+<details><summary>Management Site</summary>
+<img src="media/docs/managemob.png">
+</details>
+<details><summary>Contact Form</summary>
+<img src="media/docs/contactmob.png">
+</details>
+<details><summary>Edit Products</summary>
+<img src="media/docs/editmob.png">
+</details>
+<details><summary>Login Page</summary>
+<img src="media/docs/loginmob.png">
+</details>
+<details><summary>Register Page</summary>
+<img src="media/docs/registermob.png">
+</details>
+<details><summary>Manage Email</summary>
+<img src="media/docs/manageemailmob.png">
+</details>
+<details><summary>Change Password</summary>
+<img src="media/docs/changepassmob.png">
 </details>
