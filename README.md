@@ -595,6 +595,20 @@ After creating a S3 bucket you need to connect it to django
 3. Click on your newly set up webhook and click on 'Signing Secret' at the top to reveal the secret value. Copy it and set it as a new config variable in Heroku:
 - STRIPE_WH_SECRET: Signing secret from new webhook.
 
+## Run locally
+Note: The project will not run locally with database connections unless the user sets up an env.py file configuring IP, PORT, DATABASE_URL, CLOUDAINRY_API and SECRET_KEY. You must have the connection details in order to do this. These details are private and not disclosed in this repository for security purposes.
+
+To Run Locally:
+1. Navigate to the [GitHub Repository](https://github.com/monimaj89/Project4-Cake-Heaven)
+2. Click on 'Code' & select 'Download Zip' to download the files locally and open with an IDE or Copy the URL from the top box
+3. If copying the code open your development editor & in the terminal use the 'Git Clone' command followed by the above URL to create a clone of the project locally.
+
+To Fork Project:
+1. Navigate to the [GitHub Repository](https://github.com/monimaj89/Project4-Cake-Heaven)
+2. Click on the 'Fork' button at the top right of the page
+3. Give the fork the name and click "Create Fork"
+4. Once in your IDE you can install the project requirements from the requirements.txt file using the command pip3 install -r requirements.txt
+
 ## Note
 * Commit from 8 Nov - Site Deployment - An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet.
 * Credentials exposed - My AWS access and secret keys had been committed and pushed before I manage to hide them. Both keys were generated once again and switched.
