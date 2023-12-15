@@ -33,6 +33,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = [
     'cake-heaven-8414245a4be7.herokuapp.com',
     '8000-monimaj89-project4cakeh-m2z134cnh2w.ws-eu106.gitpod.io',
+    '8000-monimaj89-project4cakeh-m2z134cnh2w.ws-eu107.gitpod.io',
 ]
 
 
