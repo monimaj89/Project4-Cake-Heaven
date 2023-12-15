@@ -16,7 +16,7 @@ import ast
 
 def all_products(request):
     """
-    A view to show all birthday cakes
+    A view to show all cakes
     """
 
     products = Product.objects.all()
@@ -86,7 +86,7 @@ def product_detail(request, product_id):
         .replace("'", "")
         .split(',')
     )
-
+    # Review functionality
     if request.method == 'POST':
         rating = request.POST.get('rating', 3)
         content = request.POST.get('content', '')
