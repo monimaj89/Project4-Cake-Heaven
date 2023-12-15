@@ -609,6 +609,21 @@ To Fork Project:
 3. Give the fork the name and click "Create Fork"
 4. Once in your IDE you can install the project requirements from the requirements.txt file using the command pip3 install -r requirements.txt
 
+
+# Credits
+
+## Code
+* I've looked through a lot of ideas and website to find a concept for this project, and my main inspiration was my local bakery page [Cutter and Squidge](https://cutterandsquidge.com/pages/swansea-cake-delivery).<br>
+* As it was my first ever project created with Django I relied a lot on Google, [StackOverflow](https://stackoverflow.com/) and Slack community.
+* Building the e-commerce project in Django was a huge and sometimes really overwhelmig challenge. The majority of the code was based on Code Institute's 'Boutique Ado' walkthrough project.
+
+## Images
+* Home image has been borrowed from Almendra López Varela from (Pexel)[https://www.pexels.com/]
+* All cakes images were borrowed from (Pexel)[https://www.pexels.com/]
+
+
 ## Note
 * Commit from 8 Nov - Site Deployment - An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet.
 * Credentials exposed - My AWS access and secret keys had been committed and pushed before I manage to hide them. Both keys were generated once again and switched.
+
+[Go to Top](#cake-heaven)
