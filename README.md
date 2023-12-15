@@ -164,7 +164,7 @@ Fonts was imported from [Google Fonts](https://fonts.google.com/)
 
 All images are fully credited [here](#credits)
 
-* Favicon - borrowed from [Here](https://favicon.io/)
+* Favicon - borrowed from [Favicon page](https://favicon.io/)
 
 ![Favicon](media/docs/favicon.png)
 
@@ -217,7 +217,7 @@ Contains all products within all categories. On the top user can sort and filter
 
   * Reviews - Below the detail card user can see all the review from other users, and logged in user can add his own review
 
-  ![Reviews](media/docs)
+  ![Reviews](media/docs/review.png)
 
   * Go Back/Add to Bag Buttons - Buttons to go back to products page, or to add product to the bag
 
@@ -293,6 +293,68 @@ Main templates provided by AllAuth:
 A 404 error page created for a positive user experiance when lost on non-existent page, with button to quick get back to home page
 
 ![404 Page](media/docs/error.png)  
+
+# Technologies Used
+
+## Language
+* HTML - Used for the main structure of the page
+* CSS - Used for styling, combined with Bootstrap
+* JavaScript - Used for fronend interactive features
+  * Stripe Payment Functionality
+  * CountryField on address form
+  * Modal window 
+  * Products' quantity input
+  * Update quantity/Remove item
+  * Products' sort/filter box
+  * Product form image field
+  * Scroll to top button
+* Python - Used for the core of the page backend
+  * Python Modules Used:
+    * asgiref==3.7.2
+    * boto3==1.28.80
+    * botocore==1.31.80
+    * dj-database-url==0.5.0
+    * Django==3.2.22
+    * django-allauth==0.41.0
+    * django-countries==7.2.1
+    * django-crispy-forms==1.14.0
+    * django-ses==3.5.0
+    * django-storages==1.14.2
+    * gunicorn==21.2.0
+    * jmespath==1.0.1
+    * oauthlib==3.2.2
+    * Pillow==10.1.0
+    * psycopg2==2.9.9
+    * python3-openid==3.2.0
+    * pytz==2023.3.post1
+    * requests-oauthlib==1.3.1
+    * s3transfer==0.7.0
+    * sqlparse==0.4.4
+    * stripe==7.6.0
+    * urllib3==1.26.18
+* Tools
+  * [GitHub](https://github.com/) - used to host the site
+  * [Gitpod](https://gitpod.io/workspaces) - used for version control and saving work in the repository, using the GitPod extension in Google Chrome to commit to GitHub
+  * [Heroku](https://dashboard.heroku.com/) - used to deploy the site
+  * [Balsamiq](https://balsamiq.com/wireframes/) - used to create a wireframes for this project
+  * [LucidChart](https://www.lucidchart.com/) - used for creating the Flowchart
+  * [DrawSQL](https://drawsql.app/) - to design the database schema
+  * [Favicon.io](https://favicon.io/) - used for a browser tab icon
+  * [TinyPNG](https://tinypng.com/) - for compressing the images
+  * [Font Awesome](https://fontawesome.com/) - used for icons across the site
+  * [Bootstrap5](https://getbootstrap.com/) - used for the styling as well as the responsivness of the site
+  * [Google Fonts](https://fonts.google.com/) - used to select and import font for the project
+  * [JsHint](https://jshint.com/) - used for validating the javascript code
+  * [CI Phython Linter](https://pep8ci.herokuapp.com/) - used for validating the python code
+  * [HTML - W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) - used for validating the HTML
+  * [CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) - used for validating the CSS
+  * [Chrome Del Tools](https://developer.chrome.com/docs/devtools/) - used for debugging and testing with Lighthouse
+  * [W.A.V.E.](https://wave.webaim.org/) - for testing accessibility
+  * [AWS](https://aws.amazon.com/) - for storing media and static data
+  * [AWS SES](https://us-east-1.console.aws.amazon.com/ses/home?region=us-east-1#/homepage) - to handle sending contact form 
+  * [ElephantSql](https://www.elephantsql.com/) - for hosting the PostgresSql database migrated from Heroku
+  * LightHouse - for testing performance
+  * Gmail - for sending emails using the SMTP server
 
 
 ## Note
