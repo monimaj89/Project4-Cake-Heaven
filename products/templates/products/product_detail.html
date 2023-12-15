@@ -143,6 +143,7 @@
             </div>
         </div>
     </div>
+    <hr>
      <!--  Reviews -->
     <div class="row table-size mx-2 my-5">
         <p class="lead logo-font text-center">Reviews</p>
@@ -170,15 +171,21 @@
                 </form>
             {% endif %}
         </div>
-        {% for review in product.reviews.all %}
-            <div class="col-12 py-3 mt-2 shadow">
-                <strong>Rating:</strong> {{ review.rating }}/5 <br>
-                <strong>Review:</strong>
-                {{ review.content }} <br>
-                <strong>Created by:</strong> {{ review.created_by }} <br>
-                <strong>Date:</strong> {{ review.created_at|date:"Y-m-d" }}
+        {% if product.reviews.all %}
+            {% for review in product.reviews.all %}
+                <div class="col-12 py-3 mt-2 shadow">
+                    <strong>Rating:</strong> {{ review.rating }}/5 <br>
+                    <strong>Review:</strong>
+                    {{ review.content }} <br>
+                    <strong>Created by:</strong> {{ review.created_by }} <br>
+                    <strong>Date:</strong> {{ review.created_at|date:"Y-m-d" }}
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12 mt-5">
+                <p class="logo-font">No Review for this product yet.</p>
             </div>
-        {% endfor %}
+        {% endif %}
     </div>
 </div>
 {% endblock %}
