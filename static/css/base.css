@@ -43,6 +43,23 @@ body {
     box-shadow: 0 0 0 0.25rem rgba(224, 174, 226, 0.25);
 }
 
+.text-success {
+    color: #00563B !important;
+}
+
+.text-danger {
+    color: #C02F1D !important;
+}
+
+.text-success:hover {
+    color: #137432 !important;
+}
+
+.text-danger:hover {
+    color: #931a26 !important;
+}
+
+
 /* ------------------ Banner animation */
 .baner-anim {
     font-weight: bold;
@@ -261,14 +278,6 @@ body {
     box-shadow: 0px 0px 0px 1px #000 inset;
     border: none !important;
     outline: none !important;
-}
-
-.text-success:hover {
-    color: #114b23 !important;
-}
-
-.text-danger:hover {
-    color: #931a26 !important;
 }
 
 
