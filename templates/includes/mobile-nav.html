@@ -20,17 +20,13 @@
         <!-- Search dropdown -->
         <div class="dropdown-menu border-0 p-2 rounded-0 my-0" aria-labelledby="mobile-search">
             <form class="form" method="GET" action="{% url 'products' %}">
-                <div class="input-group w-100">
-                    <input class="form-control border border-black rounded-0" type="text" name="q"
-                        placeholder="Search">
-                    <div class="input-group-append">
-                        <button class="form-control form-control btn btn-black border border-black rounded-0"
-                            type="submit">
-                            <span class="icon">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </button>
-                    </div>
+                <div class="w-100 search-box">
+                    <input class="form-control rounded-0" type="text" name="q" placeholder="Search">
+                    <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                        <span>
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
                 </div>
             </form>
         </div>
@@ -61,11 +57,11 @@
     <li class="list-inline-item">
         <a class="nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
             <div class="text-center">
-            {% if grand_total %}
-                <div><i class="fa-solid fa-cart-plus fa-lg"></i></div>  <!-- Icon for full basket -->
-            {% else %}
-                <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>  <!-- Default icon for empty basket -->
-            {% endif %}
+                {% if grand_total %}
+                <div><i class="fa-solid fa-cart-plus fa-lg"></i></div> <!-- Icon for full basket -->
+                {% else %}
+                <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div> <!-- Default icon for empty basket -->
+                {% endif %}
                 <p class="my-0">
                     {% if grand_total %}
                     £{{ grand_total|floatformat:2 }}
