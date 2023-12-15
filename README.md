@@ -10,6 +10,28 @@ Project was created using Python, Django, HTML5, CSS3, and JavaScript. The data 
 
 [View the live site](https://cake-heaven-8414245a4be7.herokuapp.com/)
 
+# Table content
+* [UX & 5 Placen of Webiste Design](#ux-and-five-planes-of-website-design)
+    * [Strategy](#strategy)
+    * [Scope](#scope)
+    * [Structure](#structure)
+    * [Skeleton](#skeleton)
+    * [Surface](#surface)
+* [Features](#features)
+    * [Home Page](#home-page)
+    * [Product Page](#products-page)
+    * [Shopping Bag](#shopping-bag)
+    * [Checkout](#checkout)
+    * [Profile Page](#profile-page)
+    * [Management Site](#management-site)
+    * [Contact Form](#contact-form)
+    * [Authentication](#authentication)
+    * [Error Page](#error-page)
+* [Technologies](#technologies-used)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits](#credits)
+
 # UX and Five Planes of Website Design
 
 ## Strategy
@@ -355,6 +377,8 @@ A 404 error page created for a positive user experiance when lost on non-existen
   * [ElephantSql](https://www.elephantsql.com/) - for hosting the PostgresSql database migrated from Heroku
   * LightHouse - for testing performance
   * Gmail - for sending emails using the SMTP server
+
+# Testing 
 
 ## All testing undertaken for this project can be found in the [Testing documentation](/TESTING.md)
 
