@@ -90,7 +90,7 @@ body {
 /* -------------------- Main page photo */
 .photo {
     height: 430px;
-    background: url('/media/photo.jpg') no-repeat center center;
+    background: url('/media/photo.webp') no-repeat center center;
     background-size: cover;
 }
 
