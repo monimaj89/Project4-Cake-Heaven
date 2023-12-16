@@ -6,6 +6,7 @@ This is the testing documentation for my web application Cake heaven. Full [READ
 
 See the live site [here](https://cake-heaven-8414245a4be7.herokuapp.com/)
 
+
 # Validation 
 ## HTML Validation
 The initial test of the page validated by URL using [W3C HTML Validator](https://validator.w3.org/#validate_by_uri) showed couple of errors:
@@ -209,6 +210,59 @@ For full results see dropdown below
 <img src="media/docs/changepassmob.png">
 </details>
 
+
+# Responsiveness
+Responsive design testing has been carried out on different devices and screen sizes using [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+
+### Mobile devices used for testing
+* Iphone SE
+* Iphone 12 pro
+* Samsung Galaxy S8+
+* Pixel 5
+
+<details><summary>Home Page</summary>
+<img src="media/docs/responsive/mobhome.png">
+</details>
+<details><summary>Product Page</summary>
+<img src="media/docs/responsive/mobprod.png">
+</details>
+<details><summary>Product Detail Page</summary>
+<img src="media/docs/responsive/detailmob.png">
+</details>
+<details><summary>Bag Page</summary>
+<img src="media/docs/responsive/mobbag.png">
+</details>
+
+### Tablets used for testing
+* Ipad Pro
+* Ipad Air
+* Surface Pro 7
+* Nest Hub
+
+<details><summary>Home Page</summary>
+<img src="media/docs/responsive/tabhome.png">
+</details>
+<details><summary>Product Page</summary>
+<img src="media/docs/responsive/tabprod.png">
+</details>
+<details><summary>Profile</summary>
+<img src="media/docs/responsive/tabprofile.png">
+</details>
+<details><summary>Bag Page</summary>
+<img src="media/docs/responsive/tabbag.png">
+</details>
+<details><summary>Checkout</summary>
+<img src="media/docs/responsive/tabcheck.png">
+</details>
+
+
+### Browser used for testing
+* Google Chrome was the main browser I've been using during creation of the project, and I've notice Chrome has some issues with showing boldness of the text, basicly Chrome does not display bold text appropriate, so after test my page on different browser I've decided to change some text styling and leave it without bold feature
+* Safari
+* Mozilla Firefox
+
+[Go to Top](#cake-heaven---testing)
+
 # Manual Testing
 
 <details><summary>All Pages</summary>
@@ -385,6 +439,7 @@ For full results see dropdown below
 | Delete review | Admin is able to delete any review | Pass |
 </details>
 
+
 <details><summary>Authentication</summary>
 
 | **Test**| **Goal** | **Result** |
@@ -417,6 +472,7 @@ For full results see dropdown below
 | Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
 | Go Home button | Clicked redirects back to home page | Pass |
 </details>
+
 
 # User Stories Testing
 
@@ -454,3 +510,4 @@ For full results see dropdown below
 | 7 | Security Issue - Checkout Success page accessible to any user | During testing I've noticed that any user would technically be able to navigate to the checkout success page for any order if they had the order number and entered the relevant URL. Since a purchase can also be made by an unregistered user, it was difficult to apply restrictions to display this page. With the limited time I did not find solution for it, but it would be worth thinking about it in the future because it may cause significant threats in real e-commerce websites |
 | 8 | Add Review only after making the purchase | For now, adding reviews to the product is limited only to registered users and every logged in user, even without making a purchase, can write whatever they want. Due to limited time, I could not make any corrections to it, but in the future I would like to introduce review function only for users who have purchased this product |
 
+[Go to Top](#cake-heaven---testing)
