@@ -279,6 +279,8 @@ Guest user can fill his details in the form provided, which can be already saved
 
   * Success Page - after order being placed and payment confirmed user is directed to the success checkout page with order and details summary. User gets a confirmation email on his address
 
+[Go to Top](#cake-heaven)
+
 ## Profile Page 
 Any logged in user has access to his profile page which contains:
 
@@ -385,6 +387,7 @@ A 404 error page created for a positive user experiance when lost on non-existen
 
 ## All testing undertaken for this project can be found in the [Testing documentation](/TESTING.md)
 
+[Go to Top](#cake-heaven)
 
 # Deployment
 
@@ -648,9 +651,5 @@ To Fork Project:
 * Home image has been borrowed from Almendra López Varela from (Pexel)[https://www.pexels.com/]
 * All cakes images were borrowed from (Pexel)[https://www.pexels.com/]
 
-
-## Note
-* Commit from 8 Nov - Site Deployment - An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet.
-* Credentials exposed - My AWS access and secret keys had been committed and pushed before I manage to hide them. Both keys were generated once again and switched.
 
 [Go to Top](#cake-heaven)
