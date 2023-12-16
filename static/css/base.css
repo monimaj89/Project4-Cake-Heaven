@@ -183,7 +183,7 @@ body {
     margin-right: 5px;
 }
 
-.footer-link:hover {
+.link:hover {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     -webkit-text-decoration-color: rgba(255, 254, 251, 0);
