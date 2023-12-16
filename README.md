@@ -96,6 +96,7 @@ Project was created using Python, Django, HTML5, CSS3, and JavaScript. The data 
 * Order Tracking
 * Discount vouchers
 * User's wishlist
+* Adding review only for purchased products
 
 ## Structure
 
@@ -230,7 +231,7 @@ All images are fully credited [here](#credits)
   ![Footer](media/docs/footer.png)
 
 ## Products Page 
-Contains all products within all categories. On the top user can sort and filter according to name, category, price and rating
+Contains all products within all categories. On the top user can sort and filter according to name, category or price
 
 ![Product Page](media/docs/product.png)
 
@@ -278,6 +279,8 @@ Guest user can fill his details in the form provided, which can be already saved
   ![Loading spin](media/docs/load.jpeg)
 
   * Success Page - after order being placed and payment confirmed user is directed to the success checkout page with order and details summary. User gets a confirmation email on his address
+
+  ![Success Order](media/docs/thankyouorder.jpeg)
 
 [Go to Top](#cake-heaven)
 
