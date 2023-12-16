@@ -278,8 +278,10 @@ Responsive design testing has been carried out on different devices and screen s
 [Go to Top](#cake-heaven---testing)
 
 # Manual Testing
+I conducted comprehensive manual testing on my page, ensuring all functions, links and button functioned correctly. I verified the layout and design, checked the responsiveness on different devices, and reviewed the content for accuracy. The page successfully passed the thorough testing, ensuring its functionality and user-friendliness.
 
 <details><summary>All Pages</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -303,6 +305,7 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Home</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -312,6 +315,7 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Product page</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -326,6 +330,7 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Product detail</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -343,6 +348,7 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Add Product</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -356,6 +362,7 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Edit/Delete Product</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -370,6 +377,7 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Bag</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -389,6 +397,7 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Checkout</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -414,6 +423,7 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Profile</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -428,6 +438,7 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Contact</summary>
+
 | **Test**| **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
@@ -441,7 +452,8 @@ Responsive design testing has been carried out on different devices and screen s
 </details>
 
 <details><summary>Admin page</summary>
-| **Test**| **Goal** | **Result** |
+
+| **Test** | **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
 | Page Content | Accessible by typing /admin to the url address | Pass |
@@ -456,7 +468,7 @@ Responsive design testing has been carried out on different devices and screen s
 
 <details><summary>Authentication</summary>
 
-| **Test**| **Goal** | **Result** |
+| **Test** | **Goal** | **Result** |
 | :--- | :--- | :--- |
 | Responsiveness | Page content appears and is fully responsive | Pass |
 | Sign In Page | Contains user form, 'Remember me' checkbox, 'Home' and 'Sign in' buttons and 'Forgot Password' link. All features are clickable and leads to appropriate pages| Pass |
@@ -489,6 +501,7 @@ Responsive design testing has been carried out on different devices and screen s
 
 
 # User Stories Testing
+I thoroughly tested various user stories to ensure the functionality and usability of my page. I verified that users could access all pages, order products, and use all page functionalioty. I also confirmed that the page displayed the relevant information accurately and maintained a seamless user experience throughout the testing process.
 
 | **#**| **User Type** | **User Story** | **Achieved** |
 | :--- | :--- | :--- | :---|
