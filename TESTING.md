@@ -273,3 +273,74 @@ For full results see dropdown below
 | Reviews box | Logged in user can rate the product and add one review per product. Attempting to add a second review will edit the first review | Pass |
 | Reviews display | If the product contains any review, it will be displayed below a review box  | Pass |
 </details>
+
+<details><summary>Add Product</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Authentication Tests | Page only visible for and admin user, display warning for non admin user | Pass |
+| Site Management - admin | Display Add product page with form | Pass |
+| Category | Choose available category from the list | Pass |
+| Fill the form | Fill all required fields  | Pass |
+| Select image (non required) | Select image through the button, for product without the image, the default image will display | Pass |
+| Add product button | Clicked, directs to added product detail page with a success message | Pass |
+| Cancel button | Clicked, directs to all products page | Pass |
+</details>
+
+<details><summary>Edit/Delete Product</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Authentication Tests | Links only visible for and admin user, display warning for non admin user | Pass |
+| Edit/Delete links | Available on products, and product detail pages | Pass |
+| Edit product | Clicked link leads to edit product form page with alert message | Pass |
+| Edit the form | Edit all fields that need editing  | Pass |
+| Remove the image | Check the remove image box just for removing the image | Pass |
+| Select image | Select new image, no need to remove the old one | Pass |
+| Update product button | Clicked, directs to  the edited product detail page with succes message | Pass |
+| Delete product | Clicked, displays modal message confirming deleting the product, clicked 'Delete' deletes the product and directs to all products page with a success message, clicked 'No' directs back to product detail page | Pass |
+</details>
+
+<details><summary>Bag</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
+| Empty Bag | Clicked on empty bag icon, directs to the bag with 'empy bag' message, and button to kepp shopping | Pass |
+| Keep shopping button | Clicked, directs to all product page | Pass |
+| Full bag icon | When product in the bag, the bag icon changes | Pass |
+| Bag page | Display summary of item added to the bag | Pass |
+| Quantity input | Change the quantity of ordered item and update | Pass |
+| Remove item | Remove link removes item from the bag and update the bag content with a success message| Pass |
+| Bag total | Calculate the total amount of ordered items | Pass |
+| Delivery charge | Calculate the 10% of the total amount | Pass |
+| Grand total | Bag total + delivery cost | Pass |
+| Free delivery threshold | “Spend £— more” message appears when total is under free delivery threshold | Pass |
+| Keep shopping button | Directs to all product page | Pass |
+| Secure Checkout button | Directs to the checkout page | Pass |
+</details>
+
+<details><summary>Checkout</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
+| User details form | Form for user's details, filled for logged in users | Pass |
+| Links to register/login | For guest users links leads to sign in/up pages | Pass |
+| Save info checkbox | Checkbox to save details for logged in users  | Pass |
+| Contact Form | Link leads to contact form page | Pass |
+| Payment field | Secure payment function | Pass |
+| Valid form submission | Form is disabled while page is processing order & loading icon appears | Pass |
+| Valid form submission - order created | Successful form submission creates an order in the database | Pass |
+| Valid form submission - 3D Authentication | Successful form submission using the Stripe Authenticate card number brings up the Stripe authentication popup | Pass |
+| Valid form submission - 3D Authentication | Clicking ‘complete’ on authentication popup puts the order and payment through successfully | Pass |
+| Valid form submission - 3D Authentication | Clicking cancel or fail on authentication returns user to form with details filled in and an error message. Order is not created | Pass |
+| Order created in webhook backup | Any failure to create order during valid submission will result in order being created by the web hook. Only 1 order is created | Pass |
+| Invalid form submission - user details | Logged in user cannot submit form with invalid information | Pass |
+| Invalid form submission - payment info | Errors in card info are reflected in text below the payment form | Pass |
+| Invalid form submission - order not created | Any submission with errors in form or incomplete information doesn’t create an order in the database | Pass |
+| Confirmation email | Email is sent to email address provided by user on successful checkout submission | Pass |
+| Orded confirmation page | User is directed to the order confirmation page with order summary and a success message | Pass |
+| Keep shopping button | Directs to all products page | Pass |
+| Order added to profile page | For registered users order is add to his order summary on profile page | Pass |
+</details>
