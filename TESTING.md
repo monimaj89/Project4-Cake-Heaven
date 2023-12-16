@@ -417,3 +417,28 @@ For full results see dropdown below
 | Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
 | Go Home button | Clicked redirects back to home page | Pass |
 </details>
+
+# User Stories Testing
+
+| **#**| **User Type** | **User Story** | **Achieved** |
+| :--- | :--- | :--- | :---|
+| 1.1 | First time user | Immediately understand the main purpose and use of the site | The home page is the first page that the user encounters when entering the website, in the foreground there is a welcome text with a large Shop Now button and an image of delicious macaroons. Below, the user can see the section of featured cakes,  which clearly represent the purpose of the website |
+| 1.2 | First time user | Be able easily navigate through the page | All pages have the same unchanged navbar with the search option and logo, which always directs user to the main page, user account, shopping cart and cake categories available on the website. At the bottom of each page there is also a footer with a form and contact details |
+| 1.3 | First time user | Be able search for the products on the page | Search bar is available through whole site and on all devices. On product page user can also use sorting features to see products according to category or price |
+| 1.4 | First time user | Contact the company with any queries | A contact form available in the footer on each page allows the user to quickly and easily contact the bakery |
+| 1.5 | First time user | Buy prodcts without registration | Every user, even not registered one is able to order cakes, and will receive order confirmation with order number to his email address |
+| 1.6 | First time user | See the reviews left by other users | Every user is able to see product's review left by other users in the product detail page |
+| 1.7 | First time user | Be able use the page on any devices and size screens | The entire website was designed and built to be fully responsive and work on any device. All features have been thoroughly tested and work regardless of device and size |
+| 1.8 | First time user | Login/ create an user account | User account is available on main navbar through whole site, dropdown menu lets user to register or log in if user is already registered. For new users, veryfication email is send to confirm his email address, and to be able to login to his account |
+| 2.1 | Registered user | Have access to my profile page | All registered users has access to their profile page through dropdown Account menu on navbar |
+| 2.2 | Registered user | Be able to leave the reviews for purchased products | Logged in user is able to use review form, which is invisible for quest users, to leave his review on product detail page, also user can navigate to the product card from his order history so he do not have to search on a page for the product he bought |
+| 2.3 | Registered user | See my order history | Every user can see his order history on his profile page and use the order number to see summary of this order |
+| 2.4 | Registered user | Be able to update and save my personal info | Personal details on profile page can be saved and updated if necessary |
+| 2.5 | Registered user | Manage my email or change the password | Below personal details form, user have access to links to manage his email address or to change his password |
+| 2.6 | Registered user | Make purchase with my delivery info always filled | Logged in user has the opportunity to save his delivery details by checking the box below checkout form |
+| 3.1 | Admin user | Be able to add, edit and delete products | Admin can add a new product through his Management site on dropdown menu, or by admin site, typing /admin to the site address url. Editing or deleting product is also available on admin site, or by links provided on product cards. Deleting product is protected by pop up window, where admin has to confirm deleting the product |
+| 3.2 | Admin user | View and manage customer reviews | Admin is able to view, edit users' reviews on the admin site, typing /admin to the site address url and login into the admin panel |
+| 3.3 | Admin user | Delete customer review if not appropriate | Every inappropriate review can be deleted by admin using the admin panel, typing /admin to the site address url |
+| 3.4 | Admin user | Have easy access to admin controls | Admin has easy and quick access to management panel typing /admin to the site address url and login into the admin page |
+
+
