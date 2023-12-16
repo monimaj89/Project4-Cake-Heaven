@@ -318,6 +318,8 @@ Main templates provided by AllAuth:
   * Sign In - For already registered users, accessible from an account navbar, contains a 'register' link for new users. User can sign in using Username or email, and tick the box to remember him. Page also contains a "Forgot password" link if user can not log in
   * Sign Out - Accessible from an account navbar, redirects to page where user can confirm if ready to log out. After signing out the bag contect is removed from the session.
   * Forgot password - Available for already registered user on 'sign in' page, required an email address existing in database. Send an email with password reset link, where user is able to reset his password and login again.
+  * Manage email - Accessible on the user's profile page under the personal detail form, leads to page where user can manage his email address
+  * Change password - Accessible on the user's profile page under the personal detail form, leads to page where user can change his own password
 
 ## Error Page 
 A 404 error page created for a positive user experiance when lost on non-existent page, with button to quick get back to home page
