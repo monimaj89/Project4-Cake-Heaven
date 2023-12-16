@@ -208,3 +208,68 @@ For full results see dropdown below
 <details><summary>Change Password</summary>
 <img src="media/docs/changepassmob.png">
 </details>
+
+# Manual Testing
+
+<details><summary>All Pages</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Animated banner  | Display animation on all page sizes and devices  | Pass |
+| Clickable logo | Clickable text logo redirects to the home page | Pass |
+| Mobile home page button | Home page button on mobile devices redirects to the home page | Pass |
+| Search box - empty | Redirects to the all products page with error message to enter search criteria | Pass |
+| Search box - filled | Display searched product, or returns "0 Product found" if searched product does not exist | Pass |
+| Mobile search box dropdown | On mobile devices clicked search icon triggers dropdown search box | Pass |
+| Account dropdown | Clickable icon dropdowns nav links, which lead to correct pages  | Pass |
+| Bag icon | Clickable bag icon leads to a bag page | Pass |
+| Full bag icon | Icon changes for a full shopping bag | Pass |
+| Category Navbar | Navlinks lead to correct pages and not hiding a 500 internal server error | Pass |
+| Mobile hamburger menu | Mobile hamburger dropdown icon display all categories and leads to correct pages | Pass |
+| Footer | Footer presents across all pages | Pass |
+| Footer - Hover effect | Fading hover effect on links | Pass |
+| Footer - Contact us link | Clicked link works properly and leads to correct page | Pass |
+| Footer - Contact details | Telephone link provides call functionality. Email link opens email client with supplied address. | Pass |
+| Footer - Social Links | Links clickable and open correct pages in separate tab | Pass |
+| Scroll-up button | Appears after scrolling the page down, and when clicked scrolls page back up  | Pass |
+</details>
+
+<details><summary>Home</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Shop now button | Clicked leads to all products page | Pass |
+| Featured Cakes | List of only featured products clicked directs to the product details page | Pass |
+| Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
+</details>
+
+<details><summary>Product page</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
+| Page links | All links are correct and leads to appriopriate pages | Pass |
+| Products counter | Product count matches number of products on the page | Pass |
+| Sorting | Sorting box sorts correct according to choosen option | Pass |
+| Products card - Category links | Category links under the product image lead to correct category | Pass |
+| Products Card - Rating view | Display rating according to the user's review rating | Pass |
+| Products Card - Edit/Delete links | Only for admin user - Edit link leads to edit product page. Delete function display warning if admin is sure to delete the product, and then delete it | Pass |
+| Product Card | Clicked directs to product detail page | Pass |
+</details>
+
+<details><summary>Product detail</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
+| Category links | Category links under the product image lead to correct category | Pass |
+| Rating view | Display rating according to the user's review rating | Pass |
+| Edit/Delete links | Only for admin user - Edit link leads to edit product page. Delete function display warning if admin is sure to delete the product, and then delete it | Pass |
+| Product description | Display products description with list of ingredients | Pass |
+| Quantity input | Buttons are disabled when lower/upper limit is reached | Pass |
+| Go back button | Leads to all products page | Pass |
+| Add to bag button | Adds products to the bag, display success messgae with bag content summary and 'Chceckout' button| Pass |
+| Checkout button | Leads to checkout page | Pass |
+| Reviews box | Logged in user can rate the product and add one review per product. Attempting to add a second review will edit the first review | Pass |
+| Reviews display | If the product contains any review, it will be displayed below a review box  | Pass |
+</details>
