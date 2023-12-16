@@ -285,7 +285,7 @@ Guest user can fill his details in the form provided, which can be already saved
 Any logged in user has access to his profile page which contains:
 
   * Personal info details - phone number and address which can be updated
-  * Order history with order number which directs to order summary page
+  * Order history with order number which directs to order summary page and product link which leads to product detail page
   * Manage Email link - user can manage his email address
   * Change Password link - user can change his password
 
