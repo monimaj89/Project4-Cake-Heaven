@@ -643,13 +643,27 @@ To Fork Project:
 # Credits
 
 ## Code
-* I've looked through a lot of ideas and website to find a concept for this project, and my main inspiration was my local bakery page [Cutter and Squidge](https://cutterandsquidge.com/pages/swansea-cake-delivery).<br>
-* As it was my first ever project created with Django I relied a lot on Google, [StackOverflow](https://stackoverflow.com/) and Slack community.
-* Building the e-commerce project in Django was a huge and sometimes really overwhelmig challenge. The majority of the code was based on Code Institute's 'Boutique Ado' walkthrough project.
+* I've looked through a lot of ideas and website to find a concept for this project, and my main inspiration was my local bakery page [Cutter and Squidge](https://cutterandsquidge.com/pages/swansea-cake-delivery)
+* Building the e-commerce project in Django was a huge and sometimes really overwhelmig challenge. The majority of the code was based on Code Institute's 'Boutique Ado' walkthrough project., which was a really good foundation and starting point for my own project
+* As it was my first ever project created with Django I relied a lot on Google, [StackOverflow](https://stackoverflow.com/) and Slack community
 
 ## Images
 * Home image has been borrowed from Almendra López Varela from (Pexel)[https://www.pexels.com/]
 * All cakes images were borrowed from (Pexel)[https://www.pexels.com/]
+    * [Teddy Bear Cake by TUBARONES PHOTOGRAPHY](https://www.pexels.com/photo/blue-birthday-cake-with-balloon-and-teddy-bear-10577002/)
+    * [Vanilla Cake by Aitizaz Naqvi](https://www.pexels.com/photo/close-up-shot-of-a-birthday-cake-5487950/)
+    * [Sponge Cake by Dmitry Zvolskiy](https://www.pexels.com/photo/shallow-focus-of-white-icing-covered-cake-on-white-ceramic-plate-1721934/)
+    * [Lemon Cake by Ana Villacorta](https://www.pexels.com/photo/birthday-cake-in-close-up-shot-14849495/)
+    * [Underwater adventure by Bruno Bueno](https://www.pexels.com/photo/close-up-shot-of-a-blue-birthday-cake-5365902/)
+    * [Cherry Cake by Los Muertos Crew](https://www.pexels.com/photo/a-cake-with-cherries-8478058/)
+    * [Rainbow cake by Mikhail Nilov](https://www.pexels.com/photo/a-tall-cake-with-colorful-layers-8245039/)
+    * [Elegant Delight by Hebert Santos](https://www.pexels.com/photo/close-up-of-wedding-cake-with-figurines-on-top-11585002/)
+    * [Chocolate Cake by Darko Trajković](https://www.pexels.com/photo/chocolate-layer-cake-with-blueberries-10975256/)
 
+
+## Acknowledgments
+* My mentor [Gareth McGirr](https://github.com/Gareth-McGirr) for all his help and advice throughout the project
+* The whole team at [Code Institute](https://codeinstitute.net/) for their teaching and support
+* Slack Community always so helpful and patient.
 
 [Go to Top](#cake-heaven)
