@@ -7,6 +7,20 @@ This is the testing documentation for my web application Cake heaven. Full [READ
 See the live site [here](https://cake-heaven-8414245a4be7.herokuapp.com/)
 
 
+# Table of content
+
+* [Validation](#validation)
+    * [HTML Validation](#html-validation)
+    * [CSS Validation](#css-validation)
+    * [JavaScript Linting](#javascript-linting)
+    * [Python Linting](#python-linting)
+    * [Lighthouse Testing](#lighthouse-testing)
+    * [Wave Testing](#wave-testing)
+* [Responsiveness](#responsiveness)
+* [Manual Testing](#manual-testing)
+* [User Stories Testing](#user-stories-testing)
+* [Bugs, Issues and Solutions](#bugs-issues-and-solutions)
+
 # Validation 
 ## HTML Validation
 The initial test of the page validated by URL using [W3C HTML Validator](https://validator.w3.org/#validate_by_uri) showed couple of errors:
