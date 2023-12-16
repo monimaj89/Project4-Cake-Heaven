@@ -50,9 +50,10 @@ Project was created using Python, Django, HTML5, CSS3, and JavaScript. The data 
 
 2. As a registered user I want to:
 * Have access to my profile page
-* Be able to leave the products reviews
+* Be able to leave the reviews for purchased products
 * See my order history 
 * Be able to update and save my personal info
+* Manage my email or change the password
 * Make purchase with my delivery info always filled
 
 3. As an admin I want to:
@@ -283,6 +284,8 @@ Any logged in user has access to his profile page which contains:
 
   * Personal info details - phone number and address which can be updated
   * Order history with order number which directs to order summary page
+  * Manage Email link - user can manage his email address
+  * Change Password link - user can change his password
 
 ![Profil Page](media/docs/profile.png)
 
