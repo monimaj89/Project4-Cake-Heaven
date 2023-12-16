@@ -344,3 +344,76 @@ For full results see dropdown below
 | Keep shopping button | Directs to all products page | Pass |
 | Order added to profile page | For registered users order is add to his order summary on profile page | Pass |
 </details>
+
+<details><summary>Profile</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Authentication Tests | Page is visible only for registered users | Pass |
+| Welcome Header | Welcome header display name of the user| Pass |
+| Delivery form | Form with saved delivery info | Pass |
+| Update information button | Clicked, updates user informations | Pass |
+| Order history | Display all user's orders | Pass |
+| Order number | Clicked, directs to the this order summary page with an alert message | Pass |
+| Order history | Available only for user who placed this order | Pass |
+| Back to profile button | Clicked, leads back to the profile page | Pass |
+</details>
+
+<details><summary>Contact</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
+| Form | All fields are required | Pass |
+| Cancel button | Clicked, redirect to the all products page | Pass |
+| Send button | Clicked, send a message to the company email, and redirects to the Thank you page | Pass |
+| Thank you page | Display confirmation of sending the message with two links | Pass |
+| Contact page link | Go back to the contact oage for another inquiry | Pass |
+| Keep shoppin link | Leads to the all products page | Pass |
+</details>
+
+<details><summary>Admin page</summary>
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Page Content | Accessible by typing /admin to the url address | Pass |
+| Authentication Tests | Page is visible only for user with admin password | Pass |
+| Review | Display list of products which contain a review | Pass |
+| Display review | Clicked on product's name display the review  | Pass |
+| Review content | Name of reviewed product, rating, review text and created by | Pass |
+| Edit review | Admin is able to edit any part of the review | Pass |
+| Delete review | Admin is able to delete any review | Pass |
+</details>
+
+<details><summary>Authentication</summary>
+
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Sign In Page | Contains user form, 'Remember me' checkbox, 'Home' and 'Sign in' buttons and 'Forgot Password' link. All features are clickable and leads to appropriate pages| Pass |
+| Sign In | Only logged out users can access page. Already logged in user is directed to the home page | Pass |
+| Sign in - unverified user | Unverified user is directed to the Verify email page, and can not log in | Pass |
+| Sign in - user form | All fields required | Pass |
+| Sign in - user form | Incorrect username/email address or password results in error message, and user cannot log in | Pass |
+| Sign up page | Only logged out users can access page. Already logged in user is directed to the home page | Pass |
+| Sign up page | Contains 'Sign in' link for already registered user, an user form, and 'Sign up' button which redirect to 'Verify email' page | Pass |
+| Sign up - user form | All fields required | Pass |
+| Sign up Page - Success | Successful form submission creates a new user on the database - user email is unverified | Pass |
+| Sign up Page - Success | Successful form submission sends an email to the user to verifyhis address | Pass |
+| Verify email | Email confirmation link redirects user to page to verify email address | Pass |
+| Verify email | Clicking on ‘confirm’ on confirm email address page confirms the user’s email | Pass |
+| Register Page - Success | Once registered user can now sign in to site with new credentials | Pass |
+| Sign Out | Only logged in users can access page. For logged out users page reloads | Pass |
+| To sign out | Click on sign out directs user to confirmation page. Clicking on ‘sign out’ button signs user out and clears current bag. Display a success message | Pass |
+| Manage Email | Only for logged in users, accessible through profile page, allows user to manage his email address | Pass |
+| Change Password | Only for logged in users, accessible through profile page, allows user to change his password | Pass |
+</details>
+
+<details><summary>Error page</summary>
+
+| **Test**| **Goal** | **Result** |
+| :--- | :--- | :--- |
+| Responsiveness | Page content appears and is fully responsive | Pass |
+| Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
+| Go Home button | Clicked redirects back to home page | Pass |
+</details>
