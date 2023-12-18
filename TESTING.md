@@ -336,7 +336,7 @@ I conducted comprehensive manual testing on my page, ensuring all functions, lin
 | Responsiveness | Page content appears and is fully responsive | Pass |
 | Authentication Tests | Page is visible for all users, guests, registered and admin | Pass |
 | Category links | Category links under the product image lead to correct category | Pass |
-| Rating view | Display rating according to the user's review rating | Pass |
+| Rating view | Update rating score according to user review | Pass |
 | Edit/Delete links | Only for admin user - Edit link leads to edit product page. Delete function display warning if admin is sure to delete the product, and then delete it | Pass |
 | Product description | Display products description with list of ingredients | Pass |
 | Quantity input | Buttons are disabled when lower/upper limit is reached | Pass |
