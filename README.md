@@ -3,7 +3,7 @@
 
 ![Website mock-up](media/docs/mockup.png)
 
-Cake heaven is a e-commerce website project created for a imaginary bake shop in UK. The main goal of this project was to create the most user-friendly website possible, where you can shop for cakes in an easy and intuitive way. 
+Cake heaven is an e-commerce website project created for a imaginary bake shop in UK. The main goal of this project was to create the most user-friendly website possible, where you can shop for cakes in an easy and intuitive way. 
 The user can browse products, add them to the cart, and make a payment. The user can make a purchase as a registered user or as a guest. Registered users also have the option to view their order history and leave reviews about products.
 
 Project was created using Python, Django, HTML5, CSS3, and JavaScript. The data was stored in a PostgreSQL database using ElephantSql for manipulation. Cake Heaven is my fourth and last milestone project for Code Institute's Level 5 Diploma in Web Application Development.
@@ -43,10 +43,10 @@ Project was created using Python, Django, HTML5, CSS3, and JavaScript. The data 
 * Be able easily navigate through the page
 * Be able search for the products on the page
 * Contact the company with any queries 
-* Buy prodcts without registration
+* Buy products without registration
 * See the reviews left by other users
-* Be able use the page on any devices and size screens
-* Login/ create an user account
+* Be able use the page on any devices and screen sizes
+* Login/create an user account
 
 2. As a registered user I want to:
 * Have access to my profile page
@@ -60,7 +60,7 @@ Project was created using Python, Django, HTML5, CSS3, and JavaScript. The data 
 * Be able to add, edit and delete products
 * View and manage customer reviews
 * Delete customer review if not appropriate
-* Have easy acces to admin controls
+* Have easy access to admin controls
 
 ## Scope
 
@@ -163,7 +163,7 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/).
 [Bootstrap](https://getbootstrap.com/) was used and customised for the front-end development
 
 ### Colour
-The colors used on my website are simple. I decided on a white background with pink accents to emphasize the sweetness of the page
+The colours used on my website are simple. I decided on a white background with pink accents to emphasize the sweetness of the page
 
 ![Colour Palette](media/docs/palette.png)
 
@@ -209,7 +209,7 @@ All images are fully credited [here](#credits)
 
   ![Free delivery](media/docs/freedel.png)
 
-  * Logo, Search Bar, account icon and shopping Bag - Logo is a simple company name, using search bar user can search for his favoutire flavours. Through 'My Account' user can register or login, already logged in user can also go to his profile page, for admin there is also management page. Shopping bag change the icon when full
+  * Logo, Search Bar, account icon and shopping Bag - Logo is a simple company name, using search bar user can search for his favourite flavours. Through 'My Account' user can register or login, already logged in user can also go to his profile page, for admin there is also management page. Shopping bag change the icon when full
 
   ![Logo Navbar](media/docs/logonav.png)
   ![Full Bag icon](media/docs/fullbag.png)
@@ -266,7 +266,7 @@ Guest user can fill his details in the form provided, which can be already saved
 
 ![Checkout](media/docs/Checkout.png)
 
-  * Contact form link - Directs to contac form page, where user can send all inquiries
+  * Contact form link - Directs to contact form page, where user can send all inquiries
 
   * Card detail box - a simple payment form using Stripe for secure and easy purchase
 
