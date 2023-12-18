@@ -2,7 +2,7 @@
 
 ![MockUp](media/docs/mockup.png)
 
-This is the testing documentation for my web application Cake heaven. Full [README available here](/README.md)
+This is the testing documentation for my web application Cake Heaven. Full README available [here](/README.md)
 
 See the live site [here](https://cake-heaven-8414245a4be7.herokuapp.com/)
 
@@ -501,7 +501,7 @@ I conducted comprehensive manual testing on my page, ensuring all functions, lin
 
 
 # User Stories Testing
-I thoroughly tested various user stories to ensure the functionality and usability of my page. I verified that users could access all pages, order products, and use all page functionalioty. I also confirmed that the page displayed the relevant information accurately and maintained a seamless user experience throughout the testing process.
+I thoroughly tested various user stories to ensure the functionality and usability of my page. I verified that users could access all pages, order products, and use all page functionality. I also confirmed that the page displayed the relevant information accurately and maintained a seamless user experience throughout the testing process.
 
 | **#**| **User Type** | **User Story** | **Achieved** |
 | :--- | :--- | :--- | :---|
