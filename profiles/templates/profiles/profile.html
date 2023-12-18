@@ -46,7 +46,7 @@
                     <tbody>
                         {% for order in orders %}
                             <tr>
-                                <td class="link ">
+                                <td>
                                     <a href="{% url 'order_history' order.order_number %}"
                                     title="{{ order.order_number }}" class="text-info-emphasis text-decoration-none">
                                         {{ order.order_number|truncatechars:6 }}
@@ -56,7 +56,7 @@
                                 <td>
                                     <ul class="list-unstyled">
                                         {% for item in order.lineitems.all %}
-                                            <li class="small link">
+                                            <li class="small">
                                                 <a href="{% url 'product_detail' item.product.id %}" 
                                                 class="text-info-emphasis text-decoration-none">
                                                {{ item.product.name }} x{{ item.quantity }}

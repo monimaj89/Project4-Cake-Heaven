@@ -59,6 +59,11 @@ body {
     color: #931a26 !important;
 }
 
+.text-info-emphasis:hover {
+    color: #0b7a91 !important;
+}
+
+
 
 /* ------------------ Banner animation */
 .baner-anim {
