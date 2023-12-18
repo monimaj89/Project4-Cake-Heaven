@@ -55,7 +55,7 @@
                     <div class="col-12 mb-2">
                         {% if item.product.image %}
                         <img class="img-fluid image-ratio" src="{{ item.product.image.url }}"
-                            alt="{{ item.product.name }}">
+                            alt="{{ item.product.name }}" onerror="this.onerror=null;this.src='{{ MEDIA_URL }}noimage.png'">
                         {% else %}
                         <img class="img-fluid image-ratio" src="{{ MEDIA_URL }}noimage.png"
                             alt="{{ item.product.name }}">
