@@ -78,29 +78,5 @@
             "name": "brownies",
             "friendly_name": "Brownies"
         }
-    },
-    {
-        "pk": 11,
-        "model": "products.category",
-        "fields": {
-            "name": "birthveg",
-            "friendly_name": "Birthday Vegan Cakes"
-        }
-    },
-    {
-        "pk": 12,
-        "model": "products.category",
-        "fields": {
-            "name": "weddveg",
-            "friendly_name": "Wedding Vegan Cakes"
-        }
-    },
-    {
-        "pk": 13,
-        "model": "products.category",
-        "fields": {
-            "name": "treatveg",
-            "friendly_name": "Vegan Treats"
-        }
     }
 ]
