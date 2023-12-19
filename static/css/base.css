@@ -64,6 +64,50 @@ body {
 }
 
 
+/* --------------------- Remove button */
+.remove-btn {
+    background-color: #dc3545;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.remove-btn:hover {
+    background-color: #931a26;
+    color: #fff;
+}
+
+/* ------------------- Shop Now Button */
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus {
+    background: #383737 !important;
+    color: white !important;
+}
+
+
+/* ------------------------ Buttons */
+.bg-btn-color {
+    background: #fde5ee;
+    border: 1px solid #000;
+}
+
+
+.btn-hov:hover {
+    background: #ecabc3;
+    color: #fff;
+}
+
+.black-btn {
+    min-width: 100px;
+}
+
+
 
 /* ------------------ Banner animation */
 .baner-anim {
@@ -107,31 +151,6 @@ body {
     width: fit-content;
 }
 
-/* ------------------- Shop Now Button */
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus {
-    background: #222 !important;
-    color: white !important;
-}
-
-/* --------------------- Remove button */
-.remove-btn {
-    background-color: #dc3545;
-    color: #000;
-    border: 1px solid #000;
-}
-
-.remove-btn:hover {
-    background-color: #931a26;
-    color: #fff;
-}
 
 /* ------------------- Search bar */
 .search-box {
@@ -239,23 +258,6 @@ body {
 .update-link,
 .remove-item {
     cursor: pointer;
-}
-
-
-/* ------------------------ Buttons */
-.bg-btn-color {
-    background: #fde5ee;
-    border: 1px solid #000;
-}
-
-
-.btn-hov:hover {
-    background: #fde5ee;
-    color: #fff;
-}
-
-.black-btn {
-    min-width: 100px;
 }
 
 
