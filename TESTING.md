@@ -154,7 +154,7 @@ For full results see dropdown below
 <img src="media/docs/succesdes.png">
 </details>
 <details><summary>Profile Page</summary>
-<img src="media/docs/profilesdes.png">
+<img src="media/docs/profiledes.png">
 </details>
 <details><summary>Management Site</summary>
 <img src="media/docs/managemdes.png">
@@ -200,7 +200,7 @@ For full results see dropdown below
 <img src="media/docs/successmob.png">
 </details>
 <details><summary>Profile Page</summary>
-<img src="media/docs/profilesmob.png">
+<img src="media/docs/profilemob.png">
 </details>
 <details><summary>Management Site</summary>
 <img src="media/docs/managemob.png">
@@ -224,6 +224,51 @@ For full results see dropdown below
 <img src="media/docs/changepassmob.png">
 </details>
 
+## Wave Testing
+I ran the site through the [Wave Web Accessibility Evaluation Tool](https://wave.webaim.org/). There is one error regarding missing form label that are part of allauth templates and I was not able to add these label to eliminate this error. Test details with these errors below
+
+<details><summary>Home Page</summary>
+<img src="media/docs/homewave.png">
+</details>
+<details><summary>Product Page</summary>
+<img src="media/docs/prodwave.png">
+</details>
+<details><summary>Product Detail Page</summary>
+<img src="media/docs/detailwave.png">
+</details>
+<details><summary>Bag Page</summary>
+<img src="media/docs/bagwave.png">
+</details>
+<details><summary>Checkout Page</summary>
+<img src="media/docs/checkoutwave.png">
+</details>
+<details><summary>Success Checkout Page</summary>
+<img src="media/docs/successwave.png">
+</details>
+<details><summary>Profile Page</summary>
+<img src="media/docs/profilewave.png">
+</details>
+<details><summary>Management Site</summary>
+<img src="media/docs/addprodwave.png">
+</details>
+<details><summary>Contact Form</summary>
+<img src="media/docs/contactwave.png">
+</details>
+<details><summary>Edit Products</summary>
+<img src="media/docs/editwave.png">
+</details>
+<details><summary>Login Page</summary>
+<img src="media/docs/loginwave.png">
+</details>
+<details><summary>Register Page</summary>
+<img src="media/docs/registerwave.png">
+</details>
+<details><summary>Logout</summary>
+<img src="media/docs/logoutwave.png">
+</details>
+<details><summary>Change Password</summary>
+<img src="media/docs/passwave.png">
+</details>
 
 # Responsiveness
 Responsive design testing has been carried out on different devices and screen sizes using [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
