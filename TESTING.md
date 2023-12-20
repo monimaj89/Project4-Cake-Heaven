@@ -178,9 +178,6 @@ The site was run through Google Chrome Dev Tools Lighthouse on desktop and mobil
 <details><summary>Register Page</summary>
 <img src="media/docs/lighthouse/registerdes.png">
 </details>
-<details><summary>Manage Email</summary>
-<img src="media/docs/lighthouse/managedes".png>
-</details>
 <details><summary>Change Password</summary>
 <img src="media/docs/lighthouse/passdes.png">
 </details>
@@ -226,9 +223,6 @@ The site was run through Google Chrome Dev Tools Lighthouse on desktop and mobil
 </details>
 <details><summary>Register Page</summary>
 <img src="media/docs/lighthouse/registermob.png">
-</details>
-<details><summary>Manage Email</summary>
-<img src="media/docs/lighthouse/manageemailmob.png">
 </details>
 <details><summary>Change Password</summary>
 <img src="media/docs/lighthouse/passmob.png">
@@ -485,10 +479,11 @@ I conducted comprehensive manual testing on my page, ensuring all functions, lin
 | Authentication Tests | Page is visible only for registered users | Pass |
 | Welcome Header | Welcome header display name of the user| Pass |
 | Delivery form | Form with saved delivery info | Pass |
+| Change Password | Link leads to the page where user can change his password | Pass |
 | Update information button | Clicked, updates user informations | Pass |
-| Order history | Display all user's orders | Pass |
-| Order number | Clicked, directs to the this order summary page with an alert message | Pass |
-| Order history | Available only for user who placed this order | Pass |
+| Order history | Display all user's orders, available only for user who placed this order | Pass |
+| Item link | Clicked, directs to the purchased product detail page | Pass |
+| Order number | Clicked, directs to this order summary page with an alert message | Pass |
 | Back to profile button | Clicked, leads back to the profile page | Pass |
 </details>
 
@@ -572,7 +567,7 @@ I thoroughly tested various user stories to ensure the functionality and usabili
 | 2.2 | Registered user | Be able to leave the reviews for purchased products | Logged in user is able to use review form, which is invisible for quest users, to leave his review on product detail page, also user can navigate to the product card from his order history so he do not have to search on a page for the product he bought |
 | 2.3 | Registered user | See my order history | Every user can see his order history on his profile page and use the order number to see summary of this order |
 | 2.4 | Registered user | Be able to update and save my personal info | Personal details on profile page can be saved and updated if necessary |
-| 2.5 | Registered user | Manage my email or change the password | Below personal details form, user have access to links to manage his email address or to change his password |
+| 2.5 | Registered user | Change the password | Below personal details form, user have access to link to change his password |
 | 2.6 | Registered user | Make purchase with my delivery info always filled | Logged in user has the opportunity to save his delivery details by checking the box below checkout form |
 | 3.1 | Admin user | Be able to add, edit and delete products | Admin can add a new product through his Management site on dropdown menu, or by admin site, typing /admin to the site address url. Editing or deleting product is also available on admin site, or by links provided on product cards. Deleting product is protected by pop up window, where admin has to confirm deleting the product |
 | 3.2 | Admin user | View and manage customer reviews | Admin is able to view, edit users' reviews on the admin site, typing /admin to the site address url and login into the admin panel |
@@ -588,11 +583,10 @@ I thoroughly tested various user stories to ensure the functionality and usabili
 | 3 | Search bar dropdown on smaller screens overflowed and looked out of styling | I've reduce the width of the bar, and used a combination of my own and bootstrap styling and as it could looked better I am generally pleased with the outcome  |
 | 4 | Veryfication emails didn't work | During creating the project, I've implemented contact form functionality using AWS SES, which worked, but it was sending emails only from verified addresses on AWS, so then when I've added Register function, it wasn't sending verification emails to an user's email because it wasnt verified on AWS. The problem was fixed when I set up sending real emails with gmail. |
 | 5 | Sorting according to rating | As I've implemented my own rating functionality, and sorting funtionality has been adapted from Boutique Ado walkthrough, sorting due to rating returns 500 error page. As I had very limited time I've decided to delete option to sort according to rating, instead of fixing it, but this is something worth thinking about in the future |
-| 6 | No emails displayed in manage email page | When a user wants to manage their email, no email assigned to the user is displayed on the email management page. Email management page is an AllAuth template and I did not change there anything within the code. The email address seems to be there because using button to make it primary or delete it worked as they should, just not displaying email on the page. Although in the Chrome Dev Tools the email is visible in the code. |
-| 7 | Security Issue - Checkout Success page accessible to any user | During testing I've noticed that any user would technically be able to navigate to the checkout success page for any order if they had the order number and entered the relevant URL. Since a purchase can also be made by an unregistered user, it was difficult to apply restrictions to display this page. With the limited time I did not find solution for it, but it would be worth thinking about it in the future because it may cause significant threats in real e-commerce websites |
-| 8 | Add Review only after making the purchase | For now, adding reviews to the product is limited only to registered users and every logged in user, even without making a purchase, can write whatever they want. Due to limited time, I could not make any corrections to it, but in the future I would like to introduce review function only for users who have purchased this product |
-| 9 | Broken link instead of default image when product does not have image | Added onerror event to an 'img' tag in case of an error in displaying image |
-| 10 | Commit from 8 Nov - Site Deployment | An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet |
-| 11 | Credentials exposed | My AWS access and secret keys had been committed and pushed before I manage to hide them. Both keys were generated once again and switched |
+| 6 | Security Issue - Checkout Success page accessible to any user | During testing I've noticed that any user would technically be able to navigate to the checkout success page for any order if they had the order number and entered the relevant URL. Since a purchase can also be made by an unregistered user, it was difficult to apply restrictions to display this page. With the limited time I did not find solution for it, but it would be worth thinking about it in the future because it may cause significant threats in real e-commerce websites |
+| 7 | Add Review only after making the purchase | For now, adding reviews to the product is limited only to registered users and every logged in user, even without making a purchase, can write whatever they want. Due to limited time, I could not make any corrections to it, but in the future I would like to introduce review function only for users who have purchased this product |
+| 8 | Broken link instead of default image when product does not have image | Added onerror event to an 'img' tag in case of an error in displaying image |
+| 9 | Commit from 8 Nov - Site Deployment | An accidentally committed piece of code that should not had been committed at this stage. The committing concerned only site deployment, and the code from the products/views.py had not been plan to commited yet |
+| 10 | Credentials exposed | My AWS access and secret keys had been committed and pushed before I manage to hide them. Both keys were generated once again and switched |
 
 [Go to Top](#cake-heaven---testing)
