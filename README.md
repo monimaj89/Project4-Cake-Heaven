@@ -3,7 +3,7 @@
 
 ![Website mock-up](media/docs/mockup.png)
 
-Cake heaven is an e-commerce website project created for a imaginary bake shop in UK. The main goal of this project was to create the most user-friendly website possible, where you can shop for cakes in an easy and intuitive way. 
+Cake Heaven is an e-commerce website project created for a imaginary bake shop in UK. The main goal of this project was to create the most user-friendly website possible, where you can shop for cakes in an easy and intuitive way. 
 The user can browse products, add them to the cart, and make a payment. The user can make a purchase as a registered user or as a guest. Registered users also have the option to view their order history and leave reviews about products.
 
 Project was created using Python, Django, HTML5, CSS3, and JavaScript. The data was stored in a PostgreSQL database using ElephantSql for manipulation. Cake Heaven is my fourth and last milestone project for Code Institute's Level 5 Diploma in Web Application Development.
@@ -53,7 +53,7 @@ Project was created using Python, Django, HTML5, CSS3, and JavaScript. The data 
 * Be able to leave the reviews for purchased products
 * See my order history 
 * Be able to update and save my personal info
-* Manage my email or change the password
+* Be able to change my password
 * Make purchase with my delivery info always filled
 
 3. As an admin I want to:
@@ -289,7 +289,6 @@ Any logged in user has access to his profile page which contains:
 
   * Personal info details - phone number and address which can be updated
   * Order history with order number which directs to order summary page and product link which leads to product detail page
-  * Manage Email link - user can manage his email address
   * Change Password link - user can change his password
 
 ![Profil Page](media/docs/profile.png)
@@ -318,7 +317,6 @@ Main templates provided by AllAuth:
   * Sign In - For already registered users, accessible from an account navbar, contains a 'register' link for new users. User can sign in using Username or email, and tick the box to remember him. Page also contains a "Forgot password" link if user can not log in
   * Sign Out - Accessible from an account navbar, redirects to page where user can confirm if ready to log out. After signing out the bag contect is removed from the session.
   * Forgot password - Available for already registered user on 'sign in' page, required an email address existing in database. Send an email with password reset link, where user is able to reset his password and login again.
-  * Manage email - Accessible on the user's profile page under the personal detail form, leads to page where user can manage his email address
   * Change password - Accessible on the user's profile page under the personal detail form, leads to page where user can change his own password
 
 ## Error Page 
