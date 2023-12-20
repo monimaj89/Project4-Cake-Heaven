@@ -136,92 +136,98 @@ For full results see dropdown below
 ### Desktop
 
 <details><summary>Home Page</summary>
-<img src="media/docs/homedes.png">
+<img src="media/docs/lighthouse/homedes.png">
 </details>
 <details><summary>Product Page</summary>
-<img src="media/docs/proddes.png">
+<img src="media/docs/lighthouse/proddes.png">
 </details>
 <details><summary>Product Detail Page</summary>
-<img src="media/docs/detaildes.png">
+<img src="media/docs/lighthouse/detaildes.png">
 </details>
 <details><summary>Bag Page</summary>
-<img src="media/docs/bagdes.png">
+<img src="media/docs/lighthouse/bagdes.png">
 </details>
 <details><summary>Checkout Page</summary>
-<img src="media/docs/checkoutdes.png">
+<img src="media/docs/lighthouse/checkoutdes.png">
 </details>
 <details><summary>Success Checkout Page</summary>
-<img src="media/docs/succesdes.png">
+<img src="media/docs/lighthouse/successdes.png">
 </details>
 <details><summary>Profile Page</summary>
-<img src="media/docs/profiledes.png">
+<img src="media/docs/lighthouse/profiledes.png">
 </details>
 <details><summary>Management Site</summary>
-<img src="media/docs/managemdes.png">
+<img src="media/docs/lighthouse/adddes.png">
 </details>
 <details><summary>Contact Form</summary>
-<img src="media/docs/contactdes.png">
+<img src="media/docs/lighthouse/contactdes.png">
 </details>
 <details><summary>Edit Products</summary>
-<img src="media/docs/editdes.png">
+<img src="media/docs/lighthouse/editdes.png">
 </details>
 <details><summary>Login Page</summary>
-<img src="media/docs/logindes.png">
+<img src="media/docs/lighthouse/logindes.png">
+</details>
+<details><summary>Logout Page</summary>
+<img src="media/docs/lighthouse/logoutdes.png">
 </details>
 <details><summary>Register Page</summary>
-<img src="media/docs/registerdes.png">
+<img src="media/docs/lighthouse/registerdes.png">
 </details>
 <details><summary>Manage Email</summary>
-<img src="media/docs/managedes".png>
+<img src="media/docs/lighthouse/managedes".png>
 </details>
 <details><summary>Change Password</summary>
-<img src="media/docs/changepassdes.png">
+<img src="media/docs/lighthouse/passdes.png">
 </details>
 
 
 ### Mobile
 
 <details><summary>Home Page</summary>
-<img src="media/docs/homemob.png">
+<img src="media/docs/lighthouse/homemob.png">
 </details>
 <details><summary>Product Page</summary>
-<img src="media/docs/prodmob.png">
+<img src="media/docs/lighthouse/prodmob.png">
 </details>
 <details><summary>Product Detail Page</summary>
-<img src="media/docs/detailmob.png">
+<img src="media/docs/lighthouse/detailmob.png">
 </details>
 <details><summary>Bag Page</summary>
-<img src="media/docs/bagmob.png">
+<img src="media/docs/lighthouse/bagmob.png">
 </details>
 <details><summary>Checkout Page</summary>
-<img src="media/docs/checkoutmob.png">
+<img src="media/docs/lighthouse/checkoutmob.png">
 </details>
 <details><summary>Success Checkout Page</summary>
-<img src="media/docs/successmob.png">
+<img src="media/docs/lighthouse/successmob.png">
 </details>
 <details><summary>Profile Page</summary>
-<img src="media/docs/profilemob.png">
+<img src="media/docs/lighthouse/profilemob.png">
 </details>
 <details><summary>Management Site</summary>
-<img src="media/docs/managemob.png">
+<img src="media/docs/lighthouse/addmob.png">
 </details>
 <details><summary>Contact Form</summary>
-<img src="media/docs/contactmob.png">
+<img src="media/docs/lighthouse/contactmob.png">
 </details>
 <details><summary>Edit Products</summary>
-<img src="media/docs/editmob.png">
+<img src="media/docs/lighthouse/editmob.png">
 </details>
 <details><summary>Login Page</summary>
-<img src="media/docs/loginmob.png">
+<img src="media/docs/lighthouse/loginmob.png">
+</details>
+<details><summary>Logout Page</summary>
+<img src="media/docs/lighthouse/logoutmob.png">
 </details>
 <details><summary>Register Page</summary>
-<img src="media/docs/registermob.png">
+<img src="media/docs/lighthouse/registermob.png">
 </details>
 <details><summary>Manage Email</summary>
-<img src="media/docs/manageemailmob.png">
+<img src="media/docs/lighthouse/manageemailmob.png">
 </details>
 <details><summary>Change Password</summary>
-<img src="media/docs/changepassmob.png">
+<img src="media/docs/lighthouse/passmob.png">
 </details>
 
 ## Wave Testing
