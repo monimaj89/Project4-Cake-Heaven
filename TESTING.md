@@ -126,12 +126,16 @@ I ran the code through [CI Python Liner](https://pep8ci.herokuapp.com/), which s
 | profiles | views |  PASS |
 
 ## Lighthouse Testing
-The site was run through Google Chrome Dev Tools Lighthouse on desktop and mobile devices. While on desktop the results are satisfactory, unfortunatelly on mobile devices the performance results are mostly around 70%. The main reasons for the low result were:
+The site was run through Google Chrome Dev Tools Lighthouse on desktop and mobile devices. While on desktop the results are satisfactory, unfortunatelly on mobile devices the performance results are mostly around 70%. I uploaded all products' images in webp format for better results, but that did not make any difference. The main reasons for the low result were:
 * Render-blocking resources - scripts, stylesheets, and HTML imports that block or delay the browser from rendering page content to the screen, which I wasn't able to improve
 * Unused JavaScript - refers to Bootstrap and Stripe scripts
-* Images in .jpg format - All products images are already in jpg format
 
-For full results see dropdown below
+<details><summary>Warnings</summary>
+<img src="media/docs/lighthouse/lowperfmob.png">
+</details>
+
+
+#### For full results see dropdown below
 
 ### Desktop
 
