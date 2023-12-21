@@ -303,9 +303,13 @@ A form connected with company email address for user to easy and fast contact
 
 ![Contact Form](media/docs/contactform.png)
 
-  * Thank you page - after sending the inquiry user is directed into Thank you page saying that company will contact back as soon as possible
+* Thank you page - after sending the inquiry user is directed into Thank you page saying that company will contact back as soon as possible
 
-  ![Thank you page](media/docs/thankyou.png)
+![Thank you page](media/docs/thankyou.png)
+
+* Email sent to company email address
+
+![Company Email](media/docs/contactemail.png)
 
 ## Authentication
 
