@@ -389,6 +389,7 @@ A 404 error page created for a positive user experiance when lost on non-existen
   * [AWS SES](https://us-east-1.console.aws.amazon.com/ses/home?region=us-east-1#/homepage) - to handle sending contact form 
   * [ElephantSql](https://www.elephantsql.com/) - for hosting the PostgresSql database migrated from Heroku
   * [ChatGPT](https://www.usegenie.ai/) - for products' names and descriptions
+  * [Temporary email](https://temp-mail.org/en/) - to create fake accounts for page testing
   * LightHouse - for testing performance
   * Gmail - for sending emails using the SMTP server
 
