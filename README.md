@@ -370,6 +370,7 @@ A 404 error page created for a positive user experiance when lost on non-existen
   * [LucidChart](https://www.lucidchart.com/) - used for creating the Flowchart
   * [DrawSQL](https://drawsql.app/) - to design the database schema
   * [Favicon.io](https://favicon.io/) - used for a browser tab icon
+  * [Cloud Convert](https://cloudconvert.com/webp-converter) - to convert images to webp format
   * [TinyPNG](https://tinypng.com/) - for compressing the images
   * [Font Awesome](https://fontawesome.com/) - used for icons across the site
   * [Bootstrap5](https://getbootstrap.com/) - used for the styling as well as the responsivness of the site
@@ -383,6 +384,7 @@ A 404 error page created for a positive user experiance when lost on non-existen
   * [AWS](https://aws.amazon.com/) - for storing media and static data
   * [AWS SES](https://us-east-1.console.aws.amazon.com/ses/home?region=us-east-1#/homepage) - to handle sending contact form 
   * [ElephantSql](https://www.elephantsql.com/) - for hosting the PostgresSql database migrated from Heroku
+  * [ChatGPT](https://www.usegenie.ai/) - for products' names and descriptions
   * LightHouse - for testing performance
   * Gmail - for sending emails using the SMTP server
 
